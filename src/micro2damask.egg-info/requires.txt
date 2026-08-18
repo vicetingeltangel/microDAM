@@ -1,0 +1,14 @@
+numpy
+pandas
+opencv-python
+matplotlib
+scipy
+scikit-image
+PyYAML
+
+[damask]
+damask
+
+[vtk]
+vtk
+pyevtk

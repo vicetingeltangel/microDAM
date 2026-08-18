@@ -1,0 +1,31 @@
+# Example structure only.
+# Replace the material parameters with validated DAMASK parameters
+# for your actual dark and light phases.
+
+dark:
+  name: SecondPhase
+  material:
+    lattice: cF
+    mechanical:
+      output: [F, P]
+      elastic:
+        type: Hooke
+        C_11: 200000000000.0
+        C_12: 120000000000.0
+        C_44: 80000000000.0
+      plastic:
+        type: none
+
+light:
+  name: Matrix
+  material:
+    lattice: cF
+    mechanical:
+      output: [F, P]
+      elastic:
+        type: Hooke
+        C_11: 150000000000.0
+        C_12: 90000000000.0
+        C_44: 60000000000.0
+      plastic:
+        type: none

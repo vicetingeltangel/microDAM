@@ -1,0 +1,5163 @@
+homogenization:
+  SX:
+    N_constituents: 1
+    mechanical:
+      type: pass
+phase:
+  SecondPhase:
+    lattice: cF
+    mechanical:
+      output:
+      - F
+      - P
+      elastic:
+        type: Hooke
+        C_11: 200000000000.0
+        C_12: 120000000000.0
+        C_44: 80000000000.0
+      plastic:
+        type: none
+  Matrix:
+    lattice: cF
+    mechanical:
+      output:
+      - F
+      - P
+      elastic:
+        type: Hooke
+        C_11: 150000000000.0
+        C_12: 90000000000.0
+        C_44: 60000000000.0
+      plastic:
+        type: none
+material:
+- constituents:
+  - phase: SecondPhase
+    O:
+    - 0.06444267523635822
+    - 0.7835886049246595
+    - -0.6152002957030546
+    - -0.05800548256398756
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.46159535868659896
+    - 0.40524427819940334
+    - -0.745102543873144
+    - -0.25986342362749687
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.2920933627368796
+    - -0.21056102784760458
+    - -0.6722315155943075
+    - 0.6468773534748318
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.8479890926695623
+    - -0.4349114762018549
+    - -0.30151547668850787
+    - 0.029239081700312766
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - 0.09593933608689349
+    - 0.8956567501306598
+    - 0.09046317513869129
+    - 0.42474821209796415
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.07991992822251073
+    - 0.8916759220925977
+    - -0.44551021785339107
+    - -0.006892083969899591
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.3335305201857647
+    - -0.8804161734244544
+    - -0.3231062113887204
+    - -0.09605795042203218
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - 0.06833904632879462
+    - 0.3154691023532106
+    - 0.7114319217841879
+    - 0.6242384487307615
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.9292235586610408
+    - -0.043955722608592734
+    - 0.09301728659293489
+    - -0.354907391968885
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.14397479725213005
+    - 0.9320043313825501
+    - 0.049042004774060344
+    - 0.32898946154567804
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.6022860785269987
+    - -0.014784935026679736
+    - -0.03379743850168641
+    - 0.7974275004409815
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.2738099227235446
+    - -0.18760307929115655
+    - -0.8048665920483945
+    - -0.4919583111026847
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.09028959566046767
+    - 0.9828785206979066
+    - 0.14523525044388796
+    - 0.06858807837128107
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.9483524834291331
+    - -0.005999963188592406
+    - -0.01218790221727279
+    - -0.3169274722315399
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - 0.5589175607433745
+    - 0.10873694866265177
+    - -0.027887408806587216
+    - -0.8215897569458047
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.8271426779682532
+    - -0.1323485139101542
+    - 0.5461857371907402
+    - -4.048070968855714e-05
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.12942940221153562
+    - 0.7611254127405016
+    - -0.03433505949117338
+    - 0.6346315778571872
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - 0.543737544252161
+    - 0.24651785125040826
+    - 0.014122256618962797
+    - 0.8021090909929266
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.5787528893275824
+    - -0.02571193613035075
+    - -0.6330405241979251
+    - 0.5134624466877983
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.039240616851823715
+    - 0.9415919908237163
+    - -0.2959900782947198
+    - -0.15573878886393253
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.027447404973600476
+    - 0.47565635941469736
+    - -0.8264357121647952
+    - -0.30000280226564396
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.08132713400406116
+    - 0.008486945455441819
+    - 0.9944599240455243
+    - 0.06605549559947249
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.9506074906368974
+    - -0.26626477183155495
+    - 0.07594534153158107
+    - 0.1402881859821514
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - 0.73144974455961
+    - 0.024414844613840855
+    - 0.004805356776378109
+    - 0.6814411897533162
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.2639962345261752
+    - 0.22922404645880143
+    - -0.9000720618957818
+    - -0.2600627002777019
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.7635054351648308
+    - 0.6031643351415917
+    - 0.03333853938993418
+    - 0.22834355055115993
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.49219162995761867
+    - 0.34745076408550135
+    - 0.7149197405792609
+    - -0.35484522043582
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - 0.11358950715546359
+    - 0.4127434663971369
+    - -0.7039446058726176
+    - -0.5667470746933764
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.9722790508936049
+    - 0.1423569305075375
+    - -0.17318408123025208
+    - 0.06644716350858389
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.7975014921369645
+    - 0.012193979826161452
+    - 0.18420611774179008
+    - -0.5743786060446646
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.6943631806407324
+    - 0.436440363948102
+    - -0.47034990675823657
+    - 0.3258075310668128
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - 0.670501718569858
+    - 0.3917866393596598
+    - 0.13184277061061175
+    - 0.6160747993968334
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - 0.126980582760871
+    - 0.5175347128261721
+    - -0.7874580942200958
+    - -0.30974748177974837
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - 0.3448252711215033
+    - 0.46948664286406805
+    - 0.5795985283156254
+    - 0.5698625891761715
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - 0.5275536064795965
+    - 0.27102324579597215
+    - -0.1438305213804476
+    - 0.7921782461340479
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.02746513457050982
+    - 0.34762481210833984
+    - 0.8956517750750388
+    - -0.2760625910814386
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - 0.18470572228410922
+    - 0.39589862337568726
+    - -0.6460780485361328
+    - 0.6258843594183221
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.1479605106737607
+    - 0.12297804437487725
+    - 0.25525522392945793
+    - -0.9475383150773445
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.4196149531616603
+    - 0.5530366586755344
+    - 0.06280402694153861
+    - -0.7170281720016758
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - 0.03174384760680728
+    - 0.9081996032839198
+    - 0.31866681276969416
+    - -0.2694759194682363
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - 0.18554235630388455
+    - 0.951450588270282
+    - 0.1841248722021795
+    - 0.16252336304011158
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.6348797644689184
+    - -0.48821631306752733
+    - -0.5557115441428392
+    - 0.223063210837247
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - 0.49323151148974564
+    - 0.005558258670050981
+    - 0.004372159172030018
+    - 0.8698693384976114
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - 0.1203057910005746
+    - 0.16827390158251812
+    - -0.5170070514487771
+    - -0.8306106906669121
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.4069227956534409
+    - 0.5407767186171485
+    - 0.29132195403162153
+    - -0.6760960716336513
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.003430478881724626
+    - 0.0056083191598823995
+    - -0.9983972271432614
+    - -0.056211701659791946
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.4535027376342194
+    - 0.0444684317242435
+    - -0.6990138629132805
+    - 0.5511238018751397
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.6682785340646785
+    - -0.07721125812798961
+    - -0.3215880828299019
+    - -0.6663507541141118
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - 0.7687993278830267
+    - 0.05603957584074726
+    - 0.03750198736802216
+    - -0.6359251216374805
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.5847773632912094
+    - 0.18052926708500103
+    - 0.6989764509078547
+    - -0.36996829618792
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.9922834099198177
+    - -0.07111483007854287
+    - 0.07445822582370863
+    - -0.06908174829855372
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.6511383724916541
+    - -0.4937156791070444
+    - 0.555880411220471
+    - 0.15251431570233032
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - 0.3030390315589499
+    - 0.7367625139368329
+    - 0.5282846695098773
+    - 0.29370674382814543
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - 0.4601108453451816
+    - 0.7638519585426105
+    - -0.37965578916160303
+    - -0.24635274949235075
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - 0.16695102487869865
+    - 0.8910329379004635
+    - -0.4110325741816931
+    - -0.09612430405465643
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.3246819418577464
+    - 0.3331643993490334
+    - 0.14476484072702323
+    - -0.8732847534035851
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.9682810024493569
+    - -0.00305721878275716
+    - 0.004756188799398886
+    - -0.24979978458174737
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.923913928944622
+    - -0.012618888831905482
+    - -0.021491328770927562
+    - 0.3817878184730621
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.8143261081036524
+    - 0.4739100785561281
+    - -0.13983195850911564
+    - 0.3045147787598954
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.22650733129208986
+    - 0.23071769796680078
+    - 0.7912124975083988
+    - -0.519082417832041
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - 0.38674265511042194
+    - 0.8463439011162565
+    - -0.0031398263827544515
+    - -0.36622706242404296
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.31336239360136614
+    - 0.08433530339229776
+    - 0.45015575276492775
+    - 0.8318962466141994
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.6488380290619574
+    - 0.41899965722848653
+    - 0.34580076592423575
+    - -0.532794828777098
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.18814380191160382
+    - 0.23079956889459247
+    - 0.0932862842212722
+    - 0.9500690174805753
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - 0.6581869370301839
+    - 0.7521308054051152
+    - 0.024503664766500715
+    - 0.022108321883139406
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.15070642919979912
+    - -0.04331130304854682
+    - -0.40689791419648863
+    - -0.8999143240601462
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.2565050321675795
+    - 0.8833378582305313
+    - -0.3047026276098015
+    - -0.24713499431907557
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.6108464635206948
+    - 0.737086335241445
+    - 0.22059220131681007
+    - 0.1868406088697012
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - 0.01009991122280977
+    - 0.6524120417974306
+    - 0.09043574763545192
+    - 0.7523814824014583
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - 0.06480953602396071
+    - 0.9301381940208663
+    - -0.08042835449263824
+    - -0.3523832343593642
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.10515994336741226
+    - -0.7311437992133196
+    - -0.6737343650027798
+    - -0.021263503878171747
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - 0.45924291403578765
+    - 0.12046471687292729
+    - -0.2200764590304088
+    - 0.8521446767288289
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - 0.3052647258844833
+    - 0.41411906811577603
+    - -0.5023566936300633
+    - 0.6949507874077582
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.8223955765302844
+    - 0.1454021743601557
+    - 0.4232969147051202
+    - -0.35120285505087595
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.02142722029693557
+    - 0.8710801753667622
+    - 0.4184468904316954
+    - 0.25624676037250155
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.10729016098192126
+    - 0.5216306089971012
+    - 0.7068755000462531
+    - 0.4655291146084706
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.028462105201796997
+    - 0.6074322818553607
+    - 0.16809926138286183
+    - -0.775859890605261
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.4912617055592703
+    - 0.4556658471521081
+    - -0.39896145906542263
+    - -0.625987481161195
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - 0.00799009851076559
+    - 0.846916826317297
+    - 0.3325761347600686
+    - -0.4148025581098533
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.005774130899780627
+    - 0.839755163725679
+    - -0.5249639320314992
+    - -0.13853084304384253
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - 0.20754567969259413
+    - 0.9765480190596716
+    - 0.02882877904870823
+    - -0.04947381944151213
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.016437009903047962
+    - 0.9979658543508603
+    - 0.06117435629204224
+    - -0.007188629038884302
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.4902896745388945
+    - 0.4026442196075326
+    - -0.31469639714272546
+    - 0.7060168872502796
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.9045708522966562
+    - 0.18759113641409803
+    - -0.3716329631505436
+    - 0.09192431350907579
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.1114731672361642
+    - 0.3265819529286554
+    - 0.9040200595889154
+    - -0.25232061522693194
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.45616227635365264
+    - 0.04399971616133597
+    - -0.022758639963627626
+    - 0.8885167679433977
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.19796056906458465
+    - 0.5471993949895809
+    - 0.07763844009425344
+    - -0.8095410476550238
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.022828510514926032
+    - 0.5546810691458409
+    - -0.8305094887208154
+    - 0.04540660506563806
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - 0.052469459159640464
+    - 0.8630400554539575
+    - 0.43022852258256866
+    - 0.25944601922932914
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.22318112561877482
+    - -0.41389881165638426
+    - -0.8649361589133973
+    - -0.17539498248555546
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - 0.22304746102134873
+    - 0.7033272216015993
+    - -0.5479274674031084
+    - 0.3941524323803166
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - 0.19574338862928695
+    - 0.6503170870540735
+    - 0.20085614019534334
+    - 0.7059950587923806
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.7409936063244621
+    - 0.17395088094116323
+    - 0.06061358223475141
+    - 0.6457519338373924
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - 0.24593056151274778
+    - 0.8428718565096625
+    - -0.45810665004584167
+    - 0.13864879949626827
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - 0.6872583792196096
+    - 0.6062267984855548
+    - -0.18145271122219503
+    - 0.3567070262561483
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.9992877319894071
+    - -0.017658126154638448
+    - 0.007621146092513322
+    - 0.032467482323241724
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.820884141412156
+    - 0.19389570629040798
+    - -0.4180763984925416
+    - -0.33729187135725164
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.9867213644556988
+    - 0.14370295234968522
+    - -0.02653821918303664
+    - -0.07089522787368101
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.7978252586876937
+    - -0.08576907490477961
+    - 0.4291535715036906
+    - -0.4146633989822585
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.16562528359618664
+    - 0.4103651078104611
+    - -0.18955686717200756
+    - 0.8764912651209511
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.7178776390533338
+    - 0.30129675469219225
+    - -0.2369883106625865
+    - -0.5811269238027591
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.6367233273276671
+    - -0.2652684304824486
+    - 0.4309099234978578
+    - -0.5818356314778538
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - 0.08133794992185948
+    - 0.3825187289781831
+    - -0.8533322571191443
+    - -0.34480083938901773
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.6873519229763118
+    - -0.5080994283726195
+    - 0.4639957059127208
+    - -0.23257319227017464
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - 0.30907316365209103
+    - 0.2693480185453283
+    - 0.26786925965361197
+    - 0.8718781360651379
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - 0.09190534166820843
+    - 0.11771965619334177
+    - 0.008009483271053788
+    - 0.9887524153681254
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.11212001120031641
+    - -0.06897874472678164
+    - 0.9463189585790568
+    - -0.29521426879168283
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.41746310225663436
+    - 0.5160136723526293
+    - -0.6739976529394607
+    - 0.3243171472980088
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.8524985243280119
+    - -0.3482228195468345
+    - -0.23873819803824164
+    - 0.3082064353041127
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - 0.30617563593856495
+    - 0.2725304541990304
+    - 0.5848425701348606
+    - -0.6999591414145089
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.8985722975716229
+    - 0.24689031971226263
+    - -0.2864866851042154
+    - 0.22257218003881252
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - 0.6193682924659526
+    - 0.5666416639827951
+    - 0.11572455620489813
+    - 0.5309500635820645
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - 0.027079869921058156
+    - 0.046163978270037105
+    - 0.733847246372658
+    - 0.6772029140121958
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.8382014701249205
+    - -0.03018025202209787
+    - 0.4594970664161123
+    - 0.2921812687755527
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.6247744519763158
+    - 0.5433350963670465
+    - 0.09669334396075066
+    - 0.5523533782346178
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.5610250519490869
+    - 0.3489941406798285
+    - -0.006210518879427418
+    - 0.7506100254539108
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.2737799720581212
+    - -0.04827689662979079
+    - -0.9549691274209104
+    - 0.10367176001494419
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.024346988317854278
+    - 0.9668139242603924
+    - 0.2512061117549787
+    - 0.0396679900299435
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - 0.09439931447738076
+    - 0.6562550958820121
+    - -0.45274052810150445
+    - -0.59619127196686
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.8652847241328633
+    - 0.20409319666748837
+    - -0.1640485550096247
+    - 0.4274533715571966
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - 0.04889751659231597
+    - 0.9679126897618372
+    - -0.20486364461848167
+    - -0.13705818101354594
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.6964295650350926
+    - 0.5902925175039655
+    - 0.11309216398119636
+    - 0.3921106567920753
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.05884017661051307
+    - 0.1459654577506005
+    - -0.9873761851553835
+    - -0.017893790769521876
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.1484167298031428
+    - 0.1738348219036707
+    - 0.4672380065594924
+    - -0.8540741034796522
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.999461199991474
+    - -0.0007831100083303564
+    - 0.004928494636317059
+    - -0.03244081366022237
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - 0.010064786508494515
+    - 0.9574618839710525
+    - 0.21186101563995446
+    - 0.1956536502781079
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.6631925744355388
+    - 0.255848236282053
+    - -0.040020465332817085
+    - 0.7022219389619422
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.5089376488546011
+    - -0.6840480014745788
+    - -0.4538740626951214
+    - 0.2589577889726632
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.19275094873694604
+    - -0.4146340587258876
+    - -0.8583311890512466
+    - -0.23279441360861133
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.9609936774554293
+    - 0.04371826376383105
+    - -0.03461637215531589
+    - 0.2708903322065428
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.010888986039945038
+    - 0.907538072588669
+    - -0.40264418831821225
+    - -0.1188853834524396
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.07807917522613704
+    - 0.16134430735411548
+    - -0.9440234830685063
+    - -0.27693197774116407
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.09437143310216754
+    - 0.24413175455166658
+    - 0.9447655478837246
+    - -0.1972606868226258
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.8082446755671454
+    - 0.19051241944791591
+    - 0.1598129216735242
+    - 0.5337652972230709
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.9961079294406792
+    - 0.0025075582042263303
+    - 0.07930199479767923
+    - -0.03839138807551226
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.5249518067315458
+    - 0.5706687290790824
+    - -0.09355671886863842
+    - 0.6245077602520926
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.2500022104222689
+    - 0.9529429330362965
+    - 0.05600318238091845
+    - -0.16205648621196705
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.16506239128610115
+    - 0.1001437423669698
+    - 0.30570714799794313
+    - -0.9323458465133073
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.1496383973427406
+    - 0.28024415098437694
+    - -0.6656929561482601
+    - -0.6752217813536028
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.45550635920819355
+    - -0.6992070902021463
+    - 0.549624391273337
+    - -0.03919732451785004
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.33574402647164087
+    - -0.08242686321862648
+    - 0.4886513920258813
+    - 0.8010627802985958
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.28826213151057234
+    - -0.5744879434345821
+    - 0.7216800206309636
+    - -0.2569951248708384
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.746937522170706
+    - 0.23305563671295332
+    - -0.1054497986580559
+    - -0.6137179711665459
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - 0.46208815889878796
+    - 0.03742982767611202
+    - 0.04475346440607968
+    - -0.8849128029525388
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.35442369305225807
+    - -0.20833325201325226
+    - -0.9110397848910594
+    - 0.031426298770831494
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.07043009515418651
+    - 0.4448624964603181
+    - 0.7764451464629568
+    - 0.44076058747780883
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - 0.043535963531328443
+    - 0.9915680233751513
+    - 0.11856814003970195
+    - -0.028966723439488876
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - 0.7873820140252479
+    - 0.3508746481343046
+    - 0.19665788849918908
+    - 0.4671640184958737
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.12166120563923982
+    - 0.09980903363298381
+    - -0.04264441319690369
+    - -0.9866195628867027
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.8559929594514346
+    - -0.2519298977575422
+    - 0.15287282284888873
+    - 0.42477909555398463
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - 0.09961380024621048
+    - 0.7742063416014228
+    - -0.578792174789889
+    - -0.2359687475634006
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.4814941287119593
+    - -0.12652526864903885
+    - 0.8575033443847565
+    - -0.12977971635874855
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - 0.3389889999624966
+    - 0.31058358896453775
+    - 0.41379724817013674
+    - 0.7857455883281532
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.6876075352014328
+    - -0.48880636854623283
+    - -0.4843133334103029
+    - 0.23174297547898937
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.28253028408543024
+    - 0.21492001633913677
+    - 0.9023534840082501
+    - -0.24442629778639563
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.12782998976569138
+    - 0.5042485484142287
+    - -0.46014729427282686
+    - 0.7194840948290955
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.19330915265918622
+    - 0.2370527091699623
+    - 0.931487910625882
+    - -0.19689554827673914
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.04458635553378864
+    - 0.7347926457169562
+    - 0.0480636193496094
+    - -0.6751160738684173
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.22514973331325672
+    - -0.35167899849295337
+    - -0.845453594954492
+    - 0.332922961639008
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - 0.5469251088168232
+    - 0.4429984065234364
+    - -0.3644112898969481
+    - 0.6097784425174808
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.4911831109321192
+    - 0.24715002799510372
+    - 0.15610861292926273
+    - 0.8205401368405855
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.08056847049481518
+    - 0.28023465403427317
+    - 0.8492662721246585
+    - -0.44014095386807917
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.7292032182862765
+    - -0.2620243413421229
+    - 0.6316723628457783
+    - 0.024411820947958393
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.07104014314977848
+    - -0.04664577194074393
+    - -0.9895431139816324
+    - 0.11654139004167229
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - 0.1606964770777775
+    - 0.9276771489051983
+    - -0.2631759059607341
+    - -0.21054736325981602
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.30150382656186536
+    - 0.9406896901296882
+    - -0.03215174877428709
+    - 0.15219925920653818
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.26138576858075246
+    - -0.8642301067355707
+    - 0.4246188787832522
+    - 0.06695229925945201
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.5791837109731122
+    - 0.17134554361853133
+    - -0.10167881427657911
+    - -0.790473498830159
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - 0.4904674444361472
+    - 0.06172919012409059
+    - 0.03486534304091465
+    - -0.868571010850315
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.48510745727079063
+    - 0.8469308076869183
+    - -0.17035394359812686
+    - 0.13549352675171672
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.617639564175736
+    - -0.20424453603515458
+    - -0.756451037808366
+    - -0.06773009422138325
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.0251819210567032
+    - 0.2327948184171655
+    - -0.9717314028889543
+    - 0.030174890380541896
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - 0.04912710497391714
+    - 0.5044402561986676
+    - -0.07559594854331805
+    - -0.858726852990484
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.10602159087812124
+    - 0.4782559735700968
+    - -0.8527259994885562
+    - 0.18135329004028009
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - 0.05099077325806518
+    - 0.6741706700257853
+    - -0.04400995608480601
+    - 0.7354977719102497
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.8548400877823542
+    - 0.10688071634365107
+    - -0.24229541926985032
+    - 0.44622625045482534
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - 0.07985511644541432
+    - 0.8814981774418456
+    - 0.34131858749333005
+    - -0.316363312309996
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.6327693719383216
+    - -0.04349120205423452
+    - -0.24604928069534387
+    - 0.7329196332136039
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.04537936572023738
+    - 0.8551870493542542
+    - -0.4990734342771055
+    - 0.13236892000182307
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.1078790870755543
+    - 0.6181940154914889
+    - -0.7558018988180984
+    - -0.18698061804692725
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.7844047445987987
+    - 0.2022906170580784
+    - -0.30167667734105985
+    - -0.5027712056687548
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - 0.287539737351621
+    - 0.7251405574373686
+    - -0.3276330313785474
+    - -0.5330559709382187
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.17313216804566978
+    - -0.5130505135599703
+    - 0.8398320053109065
+    - 0.03855678642104647
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.2248084467387541
+    - 0.0724216327087481
+    - 0.14928313426445597
+    - -0.9601722841318054
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.4269281923762453
+    - -0.24134642668117298
+    - -0.7155359249179899
+    - -0.49748624205533315
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.89837646935622
+    - -0.04253337942786091
+    - 0.06542523005218051
+    - 0.4322385570655604
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - 0.6683600394976662
+    - 0.6078762255769297
+    - 0.12346915061619378
+    - 0.41053224091067364
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.0035121968815866552
+    - 0.9218825539378455
+    - 0.3874017440364885
+    - -0.006333240528173805
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.9371623728214544
+    - 0.2988019852156286
+    - 0.026439794304270438
+    - 0.17817125996077077
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.12977780334253072
+    - -0.15096837296089238
+    - -0.9291039309831298
+    - -0.31166032400166677
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.2787615307017004
+    - 0.47062790072480487
+    - 0.5611052034812041
+    - -0.6212586729266039
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.0037720987707275423
+    - 0.5071579357076168
+    - 0.8618185876188279
+    - 0.006732128514924546
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.9246940930970773
+    - 0.075608668249608
+    - -0.06357878015019716
+    - -0.3676709156181753
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.656615451520963
+    - -0.16156007100363884
+    - -0.6983346290198977
+    - -0.23469818532077077
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.39907146409003635
+    - 0.6225773724280299
+    - 0.6650994983116819
+    - 0.10383659872700901
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - 0.017449126680415605
+    - 0.16435516482552004
+    - 0.20181769919547785
+    - -0.9653768818781143
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.6618892765177499
+    - 0.2892868329200231
+    - 0.48897630854325064
+    - 0.4889968135001783
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.8607220819233206
+    - -0.002689493135885679
+    - 0.15010364138226354
+    - -0.4864351561719626
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.06753402003476391
+    - 0.3655429407920759
+    - 0.9152166613348057
+    - 0.15555056216612223
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.5934307049168517
+    - 0.144471249848892
+    - 0.1713430863878654
+    - 0.7730521348370161
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.48999555408158885
+    - 0.07720038840691837
+    - -0.016196740722946974
+    - 0.8681486754007354
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.2987800906161731
+    - 0.8698100885941524
+    - -0.391575810621344
+    - -0.02879673188854946
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.15632010083232678
+    - 0.9208615040961177
+    - -0.11312181823957124
+    - -0.3387942894851985
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.36891844281625386
+    - -0.15726586295261824
+    - -0.6709527806233628
+    - 0.6236898244108011
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - 0.905251177989702
+    - 0.08472136891715769
+    - 0.0187527424498779
+    - -0.41592178236739197
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.8492224982540658
+    - 0.11714715716655541
+    - -0.2229058284918988
+    - 0.46412356506781444
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.4098462424085981
+    - 0.6796131047606302
+    - -0.2936356421236692
+    - -0.5328510064697165
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - 0.1344513146475957
+    - 0.8059862421337339
+    - -0.5407938439598199
+    - 0.1996272521872628
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - 0.0255135389799204
+    - 0.8627158788625093
+    - -0.32088277176949764
+    - 0.39000592106881254
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.44494129079013667
+    - 0.5424410735253575
+    - -0.6997192353829044
+    - -0.13482552109236703
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.20487854621058826
+    - 0.9399011821641194
+    - -0.019884512002313837
+    - -0.27242458635658506
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.807579382532301
+    - 0.06592571755937768
+    - -0.15146602974229337
+    - -0.5661513777313759
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.06465140315521309
+    - 0.23081111331158016
+    - -0.9540475937208914
+    - 0.17983218554337807
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.0007602090139728285
+    - 0.03192349601164343
+    - -0.9926252092815196
+    - -0.11694232075458712
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.9174279600275913
+    - -0.18813777535896997
+    - 0.07769843620031787
+    - 0.3418962834758739
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - 0.06343513997822425
+    - 0.41851070118113287
+    - 0.6223983310253872
+    - 0.6583654711098021
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.32702069983800763
+    - 0.5423772689630101
+    - 0.47828428057031885
+    - -0.6083818759208879
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.9124541033763861
+    - 0.14937173905548393
+    - -0.23630878427488966
+    - 0.2987871337217509
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.5761955691854109
+    - 0.3809990377127994
+    - -0.6334609286885978
+    - 0.3486626609460794
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.9871162082001117
+    - -0.11569534632908039
+    - 0.10871860309296848
+    - 0.019910893700222632
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.7338549711853837
+    - -0.19779507231073135
+    - 0.3852478588807464
+    - -0.5233718351840234
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - 0.017353892690688776
+    - 0.4061175993499636
+    - 0.6175252996841953
+    - -0.6733719938909304
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.30254908181922024
+    - 0.5697952872868279
+    - 0.09786194087872682
+    - -0.7577733329984083
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - 0.023968555331459324
+    - 0.48301186663138673
+    - -0.8586646167790657
+    - 0.16976489902287353
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.8525792925959581
+    - -0.022421620814641677
+    - 0.18058883271714926
+    - 0.48989130861291824
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.09471342521189662
+    - -0.8476053956940199
+    - -0.5218696765980047
+    - 0.015700347846736486
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.07015094481375864
+    - -0.2549296605915731
+    - 0.9613616408522863
+    - 0.07663881908146812
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.3329742333950458
+    - -0.1034385420424162
+    - -0.3418614165862197
+    - 0.8726737075017124
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.26439914473436443
+    - -0.47316086186675765
+    - 0.8379903708254591
+    - 0.06311916876079092
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - 0.22646015134501757
+    - 0.028188658913238046
+    - 0.021155599006915268
+    - -0.9733825763758684
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.059488067667766556
+    - -0.11804994867555002
+    - 0.9030572018688228
+    - 0.40867232543409104
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.170360156198918
+    - 0.30367371881606875
+    - 0.8703101254359539
+    - -0.34831017103144396
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - 0.7509480231905197
+    - 0.2619003130258851
+    - 0.18884910262098986
+    - -0.5760393293364966
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.16768394306045986
+    - -0.3069102664776347
+    - 0.9361826054591653
+    - 0.03535976252766028
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.10759845124559612
+    - 0.763787346401465
+    - 0.5724007624215454
+    - 0.2782244237046623
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.03638876477071714
+    - 0.1783355860750514
+    - 0.9464812052970125
+    - -0.2665438135790137
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.5203605574537498
+    - 0.4257309636437779
+    - 0.133639783601816
+    - -0.7280923327986794
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - 0.0006587646113258843
+    - 0.6600456326641913
+    - -0.6122662362285374
+    - 0.43528081143631303
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - 0.39430293588543025
+    - 0.03625949926911588
+    - 0.048434952422814835
+    - -0.9169866404962957
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.2398771654070534
+    - -0.4637592992904175
+    - -0.8444798874896655
+    - -0.11933137669272074
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.01967015359156248
+    - 0.3026273529145641
+    - 0.0338940235564896
+    - 0.9523029798823275
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.8419159259715154
+    - 0.0643370975490269
+    - -0.17298797775291028
+    - -0.5070635769087061
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.15208632304628253
+    - 0.39910747359687887
+    - 0.6657477441401725
+    - 0.6118520376967376
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - 0.6206843173276833
+    - 0.40863372714035545
+    - 0.33456135268735854
+    - -0.579515449798238
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.23556123593593797
+    - 0.2640449128753855
+    - -0.6209020898977964
+    - -0.6994796515049686
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.09158913130059794
+    - 0.3283593851511679
+    - 0.41553018113992984
+    - -0.8432829974406966
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - 0.6217950561238702
+    - 0.33741811405229116
+    - -0.2000367072908284
+    - 0.677868158439052
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.016265596940720283
+    - 0.9866154745041986
+    - -0.16219419214543318
+    - 0.004287173813537725
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.10769829933382642
+    - 0.26167028099595163
+    - -0.021983304810158782
+    - 0.9588777162254449
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.37091561817938185
+    - -0.20775447925220775
+    - -0.8631599646318924
+    - 0.2724234865020292
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - 0.5996775478114815
+    - 0.012610312078619564
+    - -0.012634367773035978
+    - 0.800042618509204
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.5592519906050606
+    - 0.5376138976173732
+    - -0.2412631933479818
+    - -0.5830956865116292
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.7254935936177868
+    - 0.3414728856547548
+    - -0.4212984421988628
+    - -0.42374867148225454
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - 0.1643949539725406
+    - 0.8906914920694624
+    - 0.11850260089520936
+    - -0.4069399201903297
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.28758912523415453
+    - -0.7167863046738004
+    - 0.6089222691043162
+    - -0.18089654133781036
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.802533781388347
+    - 0.08873470191472832
+    - -0.20382901205398912
+    - 0.5536419567299067
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.11665171832353989
+    - 0.12346625503894604
+    - 0.9834926527777733
+    - -0.062375174636722784
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.25407639289928297
+    - 0.21094452385365864
+    - -0.933146157647839
+    - 0.1420768907828321
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.1946060421311032
+    - -0.3225622777603667
+    - -0.801123482527634
+    - 0.46506260984399417
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - 0.23494341116919937
+    - 0.22675679059401488
+    - 0.3732482757592595
+    - 0.8683712778013921
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.021380077615980455
+    - 0.01749438665522616
+    - -0.16641295010308188
+    - 0.9856690969867531
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.3032879963932205
+    - 0.23426163169367706
+    - -0.056666824838216764
+    - 0.9219147195498923
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - 0.19947561822775334
+    - 0.924546636610836
+    - 0.29746723409463427
+    - -0.13013930653086456
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.26039334628714794
+    - 0.7318815710816565
+    - 0.48404519132181933
+    - 0.40279638017073954
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.2262146718407108
+    - 0.9336193708510008
+    - -0.2685463957580763
+    - -0.0711661853771
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.4878072929026942
+    - 0.4498568714856128
+    - 0.5655747056948472
+    - 0.4896918341633937
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.6538429677892187
+    - 0.19039677446790793
+    - 0.33849522089212736
+    - -0.6493530835978167
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - 0.1564654709870893
+    - 0.9364195459530523
+    - 0.2853521518492652
+    - 0.13119123362809532
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.30048208067668086
+    - 0.01917393317322108
+    - 0.928459873824249
+    - -0.21749745326587497
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.3445171870125606
+    - 0.046718433421274935
+    - 0.048770163829207264
+    - -0.9363475673870715
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.4081900351252919
+    - 0.6372620717813423
+    - -0.31536791713041923
+    - -0.5725565683303139
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - 0.2011857736347658
+    - 0.4849986341227566
+    - -0.29740767235545934
+    - 0.7974015837770508
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.8386403793781949
+    - 0.5155221513231906
+    - 0.1527918588289909
+    - 0.08702800380962837
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - 0.08709626671671528
+    - 0.3578167575495617
+    - 0.7733176313573218
+    - -0.51610197574959
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.9647283226233233
+    - 0.07573664809800185
+    - 0.19609817410734842
+    - 0.15845734370811726
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - 0.011420161960058128
+    - 0.1891803183957523
+    - 0.9788000000105542
+    - -0.07765917210366752
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.18932487076706775
+    - -0.39310698678184974
+    - -0.86922917008104
+    - 0.23251589221503655
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.9872907883197626
+    - -0.01777093775571464
+    - -0.018570494964555005
+    - -0.15683185195296176
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.2527486587831262
+    - 0.7780966227383829
+    - -0.5657758619704039
+    - 0.10286610315405269
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.9033557858088387
+    - -0.3663467638042631
+    - -0.16369389671658147
+    - -0.15146841609253123
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.6532800129189499
+    - 0.6617478017970445
+    - -0.36139725887731977
+    - 0.06860825616028712
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - 0.25440665300226895
+    - 0.5155608075871175
+    - 0.24650836108573387
+    - 0.7801973702231556
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.44093166750735424
+    - 0.3834162888664379
+    - -0.4880863500009961
+    - 0.6483385912960739
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.10692260947114351
+    - 0.09053476268976206
+    - 0.2770966476508038
+    - -0.9505727011592939
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.9246976579018407
+    - -0.13987760642401825
+    - 0.2413591530743175
+    - 0.25906419266117436
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.6215434964293544
+    - 0.6066356565779171
+    - -0.47596950221237555
+    - 0.13831086428171863
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.793977229384935
+    - -0.04248801619365351
+    - -0.04199359764302818
+    - 0.605005343327764
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.788623845323732
+    - 0.1365377796468416
+    - 0.1742620071065
+    - -0.5736397983012818
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.505217744767975
+    - -0.32155884531646883
+    - 0.6793397081456454
+    - -0.42409020303101774
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.02594399830107209
+    - 0.16259473314082376
+    - -0.9613842034235918
+    - -0.22052273151447335
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.8225566406752987
+    - 0.07157412325168945
+    - -0.011591474865200183
+    - -0.5640419802392096
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.013757932130049886
+    - 0.9197481589068286
+    - -0.37835756836083484
+    - -0.10353547196531374
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.017822117718004134
+    - 0.46372955986464987
+    - 0.88494016691543
+    - 0.038963680620225385
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.020152865838754298
+    - 0.3630170017137593
+    - 0.7209732435406515
+    - 0.5899238091175081
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - 0.28768760314085123
+    - 0.8942229973459943
+    - -0.08470741355348266
+    - 0.3323036685107416
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - 0.13804576892112033
+    - 0.6499339326003658
+    - 0.5607626562095214
+    - -0.49403895832053757
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.4188412959538678
+    - -0.00553515822869175
+    - 0.01772810195849052
+    - 0.9078695089207575
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - 0.1522843543970504
+    - 0.8907445594417398
+    - 0.2777601502442892
+    - -0.3259338953945787
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.16789171458569424
+    - -0.2314806596673853
+    - -0.9581963492372787
+    - -0.009425109112310667
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.2667205933366928
+    - -0.02581496224062385
+    - -0.7874558160999031
+    - -0.5550739144520063
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.05037999378044252
+    - 0.8290821925310288
+    - 0.2478410908499708
+    - 0.4986575658113705
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - 0.02963014477429859
+    - 0.8070953529212731
+    - 0.20053112311766802
+    - 0.5545326090273739
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.837746606288638
+    - 0.392197454072431
+    - 0.37531697859666063
+    - -0.05915189133110674
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.46218191454194857
+    - 0.11027793283529262
+    - -0.10114807701602427
+    - -0.8740684881151327
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.44212970120464956
+    - 0.10408354166655925
+    - -0.6387628609121279
+    - -0.6210233096963322
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.03059061286262421
+    - 0.09042327045316756
+    - 0.9954164330258639
+    - -0.005828501291758975
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - 0.1569609062818609
+    - 0.3575715752661065
+    - 0.7522108253359289
+    - -0.5307397824813329
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.8820789629620504
+    - 0.06542649737690552
+    - -0.06209188278927197
+    - 0.4623858503808988
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.07584205375454381
+    - -0.007483152060625831
+    - -0.9657972846138031
+    - -0.24784590041018403
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.9020138824908667
+    - 0.13446941273803026
+    - -0.03360918685714134
+    - -0.40885126316356674
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.3209461041532468
+    - 0.015156246691862453
+    - 0.0031367951442947224
+    - -0.946970985263694
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.8761278879746722
+    - 0.40321454274682633
+    - -0.05190772800061579
+    - 0.259082118650288
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.8358589282679512
+    - 0.24553530663028092
+    - -0.47890194869518543
+    - -0.10819052069696279
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - 0.06252848427301076
+    - 0.10868335564372444
+    - -0.07273162759590522
+    - 0.9894383392651561
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.18856989994440884
+    - 0.6490945916166692
+    - -0.690783365815693
+    - -0.2567799553728584
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - 0.48018427508504863
+    - 0.38979885003593673
+    - -0.26131899838910766
+    - -0.7410750971073182
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.8813398648283096
+    - -0.24131231320781932
+    - -0.14788034946491432
+    - -0.3783382248740448
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.7646532325785036
+    - 0.19358761882556957
+    - -0.09642432623652608
+    - 0.6070680497724474
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - 0.08850111897202434
+    - 0.05286778737452328
+    - 0.3131688955354376
+    - -0.9440856909560361
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.0292038406696326
+    - 0.5196061428212899
+    - 0.8259992283740447
+    - 0.2165222084637202
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - 0.1264657989595571
+    - 0.6725371086860896
+    - -0.6561660980377753
+    - -0.31803504668441235
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.5582493269265406
+    - 0.4298555047790045
+    - -0.4818049818848278
+    - -0.5210046961671385
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.010097531466548659
+    - -0.13194428218884927
+    - -0.9889056720531837
+    - 0.06748568764554902
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.3932902474329833
+    - -0.18981525639480396
+    - 0.8080712032168459
+    - 0.39536550209338767
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.6947552451864434
+    - -0.029216563490774505
+    - 0.6744838694584775
+    - -0.24805856474638036
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.8992696041489139
+    - 0.02993035123609248
+    - -0.004407001667919117
+    - -0.43634726017821934
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.4835163827251672
+    - 0.27706690479659135
+    - 0.441895335715887
+    - -0.7029753553115142
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - 0.5168602101551824
+    - 0.8047198407169796
+    - -0.16877350722037848
+    - 0.23832122099240896
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.03582212912118435
+    - 0.9150220079946684
+    - 0.4007535303329255
+    - -0.02912229174235886
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.9573249539005322
+    - 0.18796990420522827
+    - -0.006021095487842673
+    - 0.2194538542872913
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.7537290455263845
+    - 0.19358348775303594
+    - -0.6278641935295632
+    - -0.014300828043387965
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.05470123825729247
+    - -0.6141076581097377
+    - -0.7873069684637133
+    - 0.005224575826789602
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - 0.4848819028805811
+    - 0.3597283341921552
+    - -0.33949600072729874
+    - 0.7212680024293423
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - 0.09677680492489348
+    - 0.4946870492489811
+    - 0.4407517258209563
+    - -0.7427360833564731
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - 0.0755119607603224
+    - 0.8542818529367078
+    - 0.26253328099791534
+    - -0.4422405859864362
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - 0.32814740629652756
+    - 0.5360618612712491
+    - -0.09648564325055647
+    - 0.7717820166846283
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.3331201054605571
+    - -0.37929181878839996
+    - -0.8256264429915519
+    - 0.2520112858013561
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - 0.28523281030427955
+    - 0.11572760873819887
+    - 0.09711943469999677
+    - -0.9464761908813207
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - 0.43398860858265637
+    - 0.207038653935477
+    - 0.3434027527619066
+    - 0.8067610754074719
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - 0.05466810622721271
+    - 0.08052052814417321
+    - -0.2928659312074765
+    - 0.9511873574889917
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.22415955973942542
+    - 0.5233106315674331
+    - 0.45085962993667855
+    - -0.6874765950629029
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.45023990179281087
+    - 0.013372402317208862
+    - -0.2052191393012795
+    - 0.8689017864835523
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - 0.03146067749229804
+    - 0.8254788461947344
+    - -0.5520812466225945
+    - 0.11314237660742879
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - 0.2419465154094835
+    - 0.2780469548076896
+    - 0.6030615191513302
+    - 0.7074380387866269
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.6924542611761219
+    - 0.16764474811231583
+    - 0.6294637350805798
+    - 0.31012536308369704
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - 0.3698507238465728
+    - 0.32519533670621115
+    - 0.00774961134450225
+    - -0.8702863773372012
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.5705828841079669
+    - 0.3505453293686236
+    - -0.6296431292673186
+    - -0.3938307684619579
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.9494912384230815
+    - -0.1651360814533807
+    - -0.17432792231944977
+    - -0.20200554017107894
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - 0.2396538619265198
+    - 0.8326130210820124
+    - -0.46344707537747115
+    - -0.18584507502879202
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.3524212317877381
+    - 0.13992413873057347
+    - -0.8121862852857736
+    - 0.44336660765039204
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.0006101742689303718
+    - 0.9970931759804104
+    - 0.07617469192861537
+    - -0.001497467943104322
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.20818099836924864
+    - 0.9681451027487306
+    - -0.05108731848474751
+    - 0.12940563292094578
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.6699980322890262
+    - -0.2782394214541831
+    - 0.2926435662393477
+    - 0.6229327445369931
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - 0.307818665153997
+    - 0.6132790879564212
+    - -0.5955079009179634
+    - 0.41774007421174275
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.24109980884225105
+    - 0.5098454051712584
+    - 0.2892994904238195
+    - -0.7734561072501164
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - 0.022382540333714767
+    - 0.7680500314963018
+    - -0.6387629735982072
+    - 0.0397496486363829
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.19717035809888359
+    - 0.07931722109247386
+    - 0.12821353178773862
+    - 0.9687073441405512
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.8756717766153579
+    - 0.01599037940042674
+    - -0.013336330973224385
+    - 0.4824576558436044
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - 0.12017675470357626
+    - 0.7605076962528936
+    - -0.592131240577557
+    - -0.23783646797982072
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.07851479952572794
+    - 0.7885616903147747
+    - -0.6094927419736715
+    - -0.022901622317113023
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - 0.8606492643672188
+    - 0.16809279890160905
+    - -0.014214257307197255
+    - 0.4804431387696085
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.7081581717287968
+    - -0.19315351507292175
+    - -0.25183401795818794
+    - 0.6307006824379834
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.03412591296243852
+    - 0.9846935793564268
+    - -0.11685936774295014
+    - -0.1247311709614995
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.6265108390403991
+    - -0.06739233021242802
+    - -0.7764409511427391
+    - 0.009049407825529907
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - 0.13914736234110078
+    - 0.5493446876200788
+    - -0.22294427201821793
+    - -0.7931924591871632
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.5080155633515654
+    - -0.5334771611533242
+    - 0.6675310906686062
+    - -0.1082799561837873
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.39915551878028227
+    - -0.17685925949414755
+    - 0.5351336843238134
+    - -0.7232064809308933
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.9898914986220824
+    - -0.11699828396444402
+    - -0.06520504293510322
+    - 0.04663180117617751
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.28343437207426764
+    - 0.5521285689593259
+    - -0.21067017740362237
+    - -0.7552728489880454
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.7110722336679416
+    - -0.19845448571518728
+    - -0.670689404293931
+    - -0.07188754115878944
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.72646990627285
+    - -0.24718009401968244
+    - 0.3064317343934504
+    - -0.5632433475478955
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.6096368409620202
+    - -0.40090887183046836
+    - 0.6416245886693829
+    - -0.2365013442759152
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.2030412320971424
+    - 0.13016151380884006
+    - -0.856906334615174
+    - -0.45556972253196676
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.7003998873944401
+    - -0.6879560239065416
+    - -0.1829044334664686
+    - 0.05198533569063264
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.5051071568963093
+    - 0.5143931973925621
+    - -0.0425703599216638
+    - 0.6917038116018472
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.9384620990927973
+    - 0.1456264749738888
+    - -0.11801594856786803
+    - 0.2900931819892469
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.2861346416281597
+    - 0.8094519701931638
+    - 0.4168487661197997
+    - -0.29858262004867336
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - 0.0020059195162080968
+    - 0.782994975089558
+    - -0.5510421692582225
+    - 0.28856086527904223
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - 0.06586551566978857
+    - 0.8293542553608577
+    - -0.3247211484495521
+    - 0.4498771262355913
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.1973641455985363
+    - -0.6861974616814084
+    - -0.6887100249758296
+    - 0.12593227986479036
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.0136627588751558
+    - 0.1575144518904137
+    - -0.9403694051787108
+    - 0.3011775361301357
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.3865904445191089
+    - 0.008396749431486354
+    - 0.038553760570109945
+    - 0.9214070383665437
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.07539602670821746
+    - 0.7828478995054858
+    - -0.6136198137628004
+    - -0.0702519007156997
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.23757635630011895
+    - 0.15867205999664452
+    - 0.22208297440857863
+    - 0.9322337715301987
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.7252983944102548
+    - -0.15385885310261493
+    - -0.6671236916662138
+    - -0.07221961233278061
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.29008887785127835
+    - 0.525111324407949
+    - -0.5600673682110645
+    - -0.5713414766937961
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.5938722082745533
+    - 0.4279667305000342
+    - 0.08096402269956075
+    - 0.6764651542042072
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - 0.7842431303701779
+    - 0.21870745511374015
+    - 0.07070550117348294
+    - 0.5763076380273491
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.5080938131057247
+    - 0.8147407849112176
+    - 0.26744480920319236
+    - 0.08069327429350046
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.21558109453844196
+    - 0.9600773674003504
+    - 0.019485108909697013
+    - 0.1771907751944139
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.6811894313860438
+    - 0.009066069648657804
+    - -0.7069642285742261
+    - 0.19000090648608284
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.7509783194034793
+    - -0.2965229267765287
+    - 0.4371900855876354
+    - 0.3961950867258245
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.6687937389636187
+    - -0.5198828059082706
+    - 0.464449163497452
+    - 0.25830946047429904
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.9491830600167135
+    - 0.24330995603883263
+    - 0.07173258484781565
+    - -0.18629605508636063
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.018481746271514686
+    - 0.858402391198233
+    - 0.061601182302414126
+    - 0.5089293213982232
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.21701958807338828
+    - -0.10892160575926746
+    - -0.46791083265935196
+    - -0.8497635170277148
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.21575400576913578
+    - -0.5639692401541586
+    - 0.7495230264836259
+    - 0.27130082551540197
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - 0.1237548649873904
+    - 0.9748975968920632
+    - 0.10500669638998555
+    - 0.15242376021898352
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.31524064696266263
+    - 0.9366492890949827
+    - 0.08287709160534185
+    - -0.1282296043332635
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.9829972536960889
+    - -0.026329784648022322
+    - -0.010334558231927148
+    - -0.18142860461483606
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - 0.16995495301888475
+    - 0.9285907218809183
+    - 0.2195356527724231
+    - -0.2462492281060182
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.48073418663944334
+    - 0.46981095190355654
+    - 0.67453390213594
+    - 0.3052479748284155
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.2738525844708231
+    - 0.08725400099618993
+    - -0.15383348973958055
+    - 0.9453712279963622
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - 0.0560337819726954
+    - 0.05990511970889853
+    - -0.04136338533308813
+    - -0.9957713905632585
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.18777867712830687
+    - 0.9125091814316548
+    - 0.32471560635736507
+    - 0.16317456053822532
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.19300221584880772
+    - 0.3150423932973173
+    - -0.8864475069185651
+    - -0.2787637935256461
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.4571528627476289
+    - -0.22356519760813987
+    - -0.5602776535880997
+    - 0.6535432758355748
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.639450078679826
+    - 0.2221911596118756
+    - -0.22241344653136094
+    - -0.7016173773993454
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.4796126540681687
+    - 0.05320683174122241
+    - 0.16691322399104905
+    - -0.8598143466880873
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - 0.2629725610384904
+    - 0.8270864543375279
+    - 0.25003942133280027
+    - -0.4292478502820861
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.2619054812859217
+    - 0.24555533530302448
+    - 0.8326904678670107
+    - -0.42158591164794357
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - 0.7926953929856825
+    - 0.09474807009010038
+    - 0.044718703076120025
+    - 0.6005472960131164
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.3277141912884049
+    - 0.9377031257187891
+    - -0.08213248949019153
+    - 0.08105868871097689
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - 0.008275570411934389
+    - 0.040362339288653605
+    - 0.5621655317515133
+    - -0.8259977671955555
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.18550297478064862
+    - 0.21958976461589963
+    - -0.9036466773900822
+    - -0.3174770291931821
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - 0.40651328921776986
+    - 0.17828557760801564
+    - 0.28759371161058256
+    - 0.8486760604308191
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.42029581935729277
+    - 0.6406178484571426
+    - 0.4002290080381595
+    - -0.5027692687443358
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.6981928730267498
+    - -0.28031981324925753
+    - 0.6342075401417433
+    - -0.1781244238781227
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - 0.9016253390452798
+    - 0.1560662384292722
+    - 0.03860477482034112
+    - 0.40152801717326364
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.24337251419066616
+    - 0.8248013422736614
+    - -0.049162026932906056
+    - -0.5079917914966036
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.17559935714831737
+    - 0.7015098654276488
+    - -0.6893500832474238
+    - -0.042956224270176764
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.4863557658266593
+    - -0.10724885308083368
+    - 0.7529455934131547
+    - -0.4301496087638831
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.15354048157510836
+    - 0.6828867809421948
+    - 0.6053327537514569
+    - 0.3790293157102347
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - 0.197324157780539
+    - 0.7510849742976995
+    - 0.21104677608827305
+    - -0.5936276580847383
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.07081858415257454
+    - 0.9568126059488193
+    - -0.06351093234926447
+    - -0.2747011589130654
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.3746965424618082
+    - -0.9266235356067299
+    - 0.0309718305692485
+    - 0.0034741960277460647
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.8231784017644851
+    - 0.2738537047849561
+    - -0.2610436571443438
+    - -0.42336470838832124
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.8902729884539455
+    - -0.3945456231717326
+    - -0.1576203067689662
+    - 0.16402315738750875
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - 0.024382681910372395
+    - 0.029677092077010303
+    - 0.49712292757050414
+    - -0.8668295968138384
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.38494813581237947
+    - 0.451753537321702
+    - 0.7839905053716236
+    - -0.18191361064815803
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.8991204928713568
+    - -0.21174505382369244
+    - 0.3823140005994339
+    - 0.024132476574651975
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.02583260885325861
+    - 0.9603988081329078
+    - 0.25966329047040604
+    - 0.09768204153684582
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.24949421630012836
+    - 0.5846381786514034
+    - -0.6706965327717743
+    - 0.3822525304348878
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - 0.18997472392096934
+    - 0.549571778015404
+    - 0.5715221384344176
+    - -0.5790016497035991
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.9481284774924708
+    - 0.0753530230254816
+    - 0.1271872039889384
+    - -0.28142090759253613
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.1047654920549464
+    - -0.9718409246685242
+    - 0.210778245495144
+    - 0.011042646417480413
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.9962752416886773
+    - -0.06132487382469938
+    - 0.005847638269270013
+    - -0.06033827786093824
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.310704847910706
+    - 0.18485817822621536
+    - 0.5355015531827056
+    - -0.7632352441852903
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.8449438789845471
+    - -0.05704441562275983
+    - 0.3932248762394982
+    - -0.35803627290993295
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - 0.162199646578451
+    - 0.8579942514753266
+    - -0.1692718364649306
+    - -0.4570384934170309
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.3459267047145849
+    - 0.7281829993054442
+    - 0.3842772427776858
+    - -0.4499058069985485
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.44381698210689513
+    - 0.4161363272798091
+    - 0.7322775110655617
+    - 0.3059847876925023
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.7778542262606917
+    - 0.584427016636734
+    - 0.07645731468627927
+    - 0.21804161058025218
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - 0.6726511260571926
+    - 0.06279427947583524
+    - 0.004883571985140452
+    - 0.7372743667073793
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.9705249513560039
+    - 0.08220925499968981
+    - 0.07876410063385686
+    - -0.21241274358936602
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.0721809412797586
+    - 0.859392709337588
+    - -0.06322073665013045
+    - 0.5022322384224084
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.7139820105429174
+    - 0.5243516959349174
+    - 0.44868271137557303
+    - 0.11818972926584373
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.9170555384333855
+    - -0.03034192403998909
+    - -0.029702117241368946
+    - -0.3964924858122595
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.7883379649658094
+    - 0.09119188984078747
+    - -0.19801149902260506
+    - -0.5753248981885389
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - 0.4365559282763864
+    - 0.8725774794994422
+    - -0.1805217225792304
+    - 0.12425526722908153
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.38357073197111907
+    - 0.3388249288595414
+    - -0.8481637401600006
+    - -0.1367092938913275
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - 0.012257048858473354
+    - 0.9905347943381617
+    - -0.09226811258390849
+    - -0.10088201702454262
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.9733620118221431
+    - -0.20387579547466037
+    - 0.10234912010276048
+    - -0.022928401063209636
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - 0.04463762804363107
+    - 0.9449829158077145
+    - 0.17433798215427587
+    - -0.27316851753553817
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - 0.6143855961558912
+    - 0.21155659432829327
+    - 0.1224691914525638
+    - 0.7501836067106102
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.032704852143236866
+    - 0.9842876116167739
+    - -0.15046751157726762
+    - -0.0864165390638909
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - 0.4959648225517195
+    - 0.22725270424848934
+    - -0.1445250283741304
+    - 0.8255226340788282
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.3566456641565938
+    - 0.5613144512570906
+    - 0.3388336441582144
+    - -0.6655236424310693
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.5782425505901685
+    - 0.21774894141582665
+    - -0.6741686418897146
+    - 0.4046203078094831
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.35966447270658036
+    - 0.5953756685388353
+    - -0.498999771344547
+    - 0.516883457447346
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.5431087949821064
+    - 0.24336896254867552
+    - -0.09184320297485105
+    - 0.7983540636512012
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.48549001878463055
+    - 0.24210928778215648
+    - -0.7553311192657671
+    - 0.3676376404815472
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.885339995543659
+    - 0.11258077037776673
+    - -0.007348314068649289
+    - -0.45104840617416064
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.9390293282914686
+    - -0.2232699499168049
+    - -0.21744021816464074
+    - -0.14523843016617333
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - 0.15994079266826747
+    - 0.871494824393726
+    - -0.25739161764984514
+    - 0.38557135404382775
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - 0.4536661791664771
+    - 0.8263161807493686
+    - 0.11632849478670057
+    - 0.3128198341105104
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.6724406932077743
+    - 0.3901572702108237
+    - 0.6089747973508133
+    - -0.15732296339511964
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - 0.03943147590890834
+    - 0.8654315570980151
+    - -0.49014092038225043
+    - 0.09610024377383704
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - 0.24494787156267114
+    - 0.9089079399665188
+    - -0.302811345623864
+    - 0.14897041935968758
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.15592263967116862
+    - -0.03427987230721167
+    - 0.2700975143259612
+    - -0.9495053204419199
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - 0.14874500980644423
+    - 0.502170632377025
+    - -0.5460700474055316
+    - -0.6538402567617416
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - 0.2512787188237914
+    - 0.3349421160776278
+    - 0.1214229069789744
+    - 0.8999607002555668
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.45043391343380174
+    - -0.4933425593354384
+    - 0.6809297376417256
+    - 0.3000951535300772
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.614260754585831
+    - 0.6420292292749641
+    - -0.3767047274043096
+    - -0.2618697051655379
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - 0.07562564086095223
+    - 0.9815462078423949
+    - 0.09311288659493328
+    - -0.14892210938790626
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.3788413274961136
+    - 0.17278336682890977
+    - 0.3191158854043296
+    - -0.8513461155199217
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.8930889364815513
+    - -0.029624370918751253
+    - 0.2193759797444175
+    - -0.391648729977638
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.08746010176810774
+    - 0.3179465904908796
+    - -0.9421406175555891
+    - 0.06026402696393809
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - 0.2768181065419938
+    - 0.47501611571068353
+    - 0.689273604224542
+    - 0.47184035883437275
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - 0.10310805419857981
+    - 0.5356991920675863
+    - 0.35893178951895843
+    - -0.757339471604535
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - 0.06028869905661445
+    - 0.28307402312884367
+    - -0.24072198470301076
+    - -0.9264379613748323
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.20291238349936494
+    - -0.24535229746638243
+    - 0.8337269590070719
+    - -0.45114096752056876
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.048798523120467195
+    - 0.16305788700147017
+    - -0.4030961075862256
+    - -0.8991909461714519
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.46500749208441716
+    - 0.497337264143081
+    - -0.724544054063205
+    - 0.10704948258488371
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.0330738033074645
+    - -0.36640669915632385
+    - -0.9293266598127194
+    - -0.03168933116177308
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.15237573868648469
+    - 0.7102676212619029
+    - 0.6811188966192006
+    - 0.09153463341789707
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.014515951511430878
+    - 0.9436133282246972
+    - -0.3301285390365504
+    - -0.019957997445149644
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: SecondPhase
+    O:
+    - -0.048191835389210805
+    - 0.8241177628227438
+    - 0.4628295798535891
+    - 0.3229492839663917
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: Matrix
+    O:
+    - 0.13612242507850977
+    - 0.19769399945156235
+    - 0.22118892142815888
+    - -0.9452318387618135
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: Matrix
+    O:
+    - 0.1692910040997561
+    - 0.10518144845735043
+    - -0.27630478691691124
+    - -0.9401771554117397
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: Matrix
+    O:
+    - 0.501876395408916
+    - 0.8575716221784854
+    - -0.04881661556927888
+    - -0.10152799914248166
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: Matrix
+    O:
+    - -0.9267186101646164
+    - 0.01341555539235988
+    - 0.012933734179828054
+    - 0.37529369694712666
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: Matrix
+    O:
+    - -0.28530006173222877
+    - 0.4911226955805066
+    - -0.0972692840953184
+    - 0.81727661108887
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: Matrix
+    O:
+    - -0.1095743055470075
+    - 0.7575416642916979
+    - 0.007451733918040548
+    - -0.6434816004266716
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: Matrix
+    O:
+    - 0.2091845962500103
+    - 0.6301578326765874
+    - -0.6803934347875795
+    - -0.31017363605894377
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: Matrix
+    O:
+    - 0.3974142287783897
+    - 0.20455695044651878
+    - -0.10565298549810567
+    - 0.8882881466302672
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: Matrix
+    O:
+    - -0.3429836295857161
+    - 0.07452320785668051
+    - 0.3322669846845735
+    - -0.8754468414561674
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: Matrix
+    O:
+    - -0.46530007261517314
+    - -0.10984114569748848
+    - 0.8764476488534687
+    - -0.057186396593986055
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: Matrix
+    O:
+    - -0.3638617146781422
+    - 0.7799439111760723
+    - -0.4907996498634992
+    - 0.13567553834320945
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: Matrix
+    O:
+    - -0.7730900690692988
+    - 0.02011653425862653
+    - -0.5749765504657656
+    - -0.26707496432712896
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: Matrix
+    O:
+    - 0.007498384054129651
+    - 0.16399133190725335
+    - 0.9838433247021532
+    - -0.07143479358740856
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: Matrix
+    O:
+    - -0.18811647109918883
+    - -0.9311876072474531
+    - -0.30804378591932835
+    - -0.05109656902804745
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: Matrix
+    O:
+    - 0.1737547425315168
+    - 0.8563670564430129
+    - -0.46766349517992944
+    - -0.13317510789568654
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: Matrix
+    O:
+    - -0.5576904391710793
+    - -0.746369792056872
+    - -0.3203491096902124
+    - -0.17114308482330923
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: Matrix
+    O:
+    - -0.3269357895181733
+    - 0.506705694615339
+    - -0.664943011560043
+    - -0.44069617646852344
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: Matrix
+    O:
+    - -0.7914013330874471
+    - 0.40879260006203544
+    - -0.33211280056549786
+    - 0.3102799184969505
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: Matrix
+    O:
+    - -0.9350403732672845
+    - -0.19962541900153616
+    - 0.08214599613882897
+    - -0.28124940491847805
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: Matrix
+    O:
+    - -0.7415733725853371
+    - 0.04541786439348432
+    - -0.09146610021232845
+    - 0.6630536201381396
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: Matrix
+    O:
+    - -0.8641076844695686
+    - 0.0340322992625953
+    - 0.14283524613468745
+    - -0.4814123021996681
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: Matrix
+    O:
+    - -0.5233819997387358
+    - 0.5628240002528504
+    - -0.33809534065357977
+    - -0.5431316301940086
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: Matrix
+    O:
+    - -0.139004523448534
+    - 0.07864834366414614
+    - 0.9720162246503401
+    - -0.17226909042608912
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: Matrix
+    O:
+    - -0.9151907889973125
+    - 0.24689874442291995
+    - -0.03933238666093866
+    - 0.31610092232769027
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: Matrix
+    O:
+    - 0.20590439882775124
+    - 0.6798708736674087
+    - -0.5023225846665483
+    - -0.49300202293298456
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: Matrix
+    O:
+    - -0.20579251213618052
+    - 0.8690119425866706
+    - -0.3709119825153571
+    - -0.2547390563242094
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: Matrix
+    O:
+    - -0.016206469652044284
+    - -0.07439575725047187
+    - -0.9931516641075155
+    - -0.08861373327548466
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: Matrix
+    O:
+    - -0.8742238946943255
+    - 0.1915060318625273
+    - -0.012803315791313316
+    - 0.44597544417882623
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: Matrix
+    O:
+    - -0.0968943666326283
+    - 0.7714446859109044
+    - 0.6264717644238791
+    - 0.054933657026633644
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: Matrix
+    O:
+    - -0.8354513271204427
+    - 0.005154418478092089
+    - 0.0048627420942240025
+    - -0.5495187582987218
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: Matrix
+    O:
+    - -0.1711349229571378
+    - 0.6032193280820659
+    - -0.7048986882264341
+    - 0.3315978282638893
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: Matrix
+    O:
+    - -0.5016739730142027
+    - -0.024346478759690218
+    - -0.3381136864702808
+    - -0.7958703467234006
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: Matrix
+    O:
+    - 0.645856802776607
+    - 0.059422167363969124
+    - 0.04917039245083629
+    - -0.759552676803379
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: Matrix
+    O:
+    - -0.3961710461223614
+    - 0.5717301755036558
+    - 0.5334531176722611
+    - -0.48124929078245654
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: Matrix
+    O:
+    - 0.31109633107617835
+    - 0.782246237365538
+    - 0.15920911407136223
+    - 0.5157153816932467
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: Matrix
+    O:
+    - -0.6121031089639489
+    - 0.543306963935543
+    - -0.19443307579935917
+    - -0.5406876232826229
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: Matrix
+    O:
+    - 0.13104623258217685
+    - 0.616887428277054
+    - 0.7297446181904895
+    - 0.26410145395615886
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: Matrix
+    O:
+    - -0.05804347412238246
+    - 0.17263116129761152
+    - -0.9673706320595283
+    - 0.17613488436306643
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: Matrix
+    O:
+    - 0.19071019669846476
+    - 0.6476639805652836
+    - -0.22559911594303417
+    - -0.7023290027040647
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: Matrix
+    O:
+    - 0.2277751097513911
+    - 0.510253889984529
+    - -0.0743587935287455
+    - 0.8259722979364063
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: Matrix
+    O:
+    - -0.4879401506549445
+    - 0.36774571623872887
+    - 0.11460497376964067
+    - 0.7832899830549056
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: Matrix
+    O:
+    - -0.32187840933818196
+    - 0.6269020370444652
+    - 0.6530792193979843
+    - 0.2772646005929014
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: Matrix
+    O:
+    - -0.9475756918849955
+    - 0.23389509435587985
+    - -0.19407536921619306
+    - 0.09863135428718726
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: Matrix
+    O:
+    - 0.6521078821779034
+    - 0.12323866553153569
+    - -0.01808233433558233
+    - 0.7478238900332299
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: Matrix
+    O:
+    - -0.7926335565296058
+    - -0.5381811709980708
+    - 0.17009055201536874
+    - 0.23056946103393794
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: Matrix
+    O:
+    - -0.04526932612486115
+    - 0.986837431484388
+    - 0.1349206578881037
+    - 0.07680486969286675
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: Matrix
+    O:
+    - -0.6504491849916355
+    - -0.25075701374418624
+    - -0.7099275717300106
+    - -0.10019790765952087
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: Matrix
+    O:
+    - -0.91143753848997
+    - -0.053829059148380154
+    - 0.4038190887007257
+    - 0.05756899706838734
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: Matrix
+    O:
+    - -0.07379266409957047
+    - 0.8393787707858347
+    - 0.44934032813129626
+    - 0.29680160274838174
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: Matrix
+    O:
+    - -0.7044301288920989
+    - -0.2903727988076764
+    - -0.5149544577551913
+    - -0.3927896862949872
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: Matrix
+    O:
+    - -0.8818937638394233
+    - -0.4129215076224669
+    - 0.1966023022197806
+    - -0.11448472651758629
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: Matrix
+    O:
+    - -0.47676987032236334
+    - 0.6227804440983077
+    - -0.5906737751020762
+    - 0.1895771626757121
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: Matrix
+    O:
+    - -0.20576087550642333
+    - 0.8195197307494856
+    - -0.5162857511364338
+    - 0.13963844813162657
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: Matrix
+    O:
+    - -0.5581759556012879
+    - 0.6993106890174006
+    - 0.44590367283655646
+    - -0.023959911633123374
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: Matrix
+    O:
+    - -0.0715756955204459
+    - 0.49182978417112866
+    - -0.825809725082425
+    - 0.26649330417898875
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: Matrix
+    O:
+    - 0.18735580630539803
+    - 0.8499534105196691
+    - -0.1432442997210518
+    - -0.4711242642733043
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: Matrix
+    O:
+    - -0.7350531938434638
+    - 0.21040076059063717
+    - -0.011588471698893862
+    - -0.644433107069375
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: Matrix
+    O:
+    - -0.34456317611015663
+    - -0.847039848692787
+    - 0.40417365634551217
+    - 0.021056303371708617
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: Matrix
+    O:
+    - -0.7207424179614634
+    - 0.5345064323580764
+    - 0.4347234302359438
+    - 0.07647731639380931
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: Matrix
+    O:
+    - 0.030208858371668354
+    - 0.27742069230606536
+    - -0.9376143255502274
+    - 0.20737541049819788
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: Matrix
+    O:
+    - -0.3421771541945827
+    - -0.6921250775249738
+    - -0.5872393815896007
+    - -0.24295592381872355
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: Matrix
+    O:
+    - -0.9183066964517674
+    - -0.19196772761821862
+    - 0.22603088335077728
+    - 0.26224271691813705
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: Matrix
+    O:
+    - 0.08944931134264462
+    - 0.4833979769640628
+    - 0.8070969413923876
+    - 0.3269858464252402
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: Matrix
+    O:
+    - -0.00913147059464603
+    - 0.127748001710838
+    - -0.9285385350577938
+    - 0.34844404603378326
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: Matrix
+    O:
+    - 0.23221359889482293
+    - 0.10856330270942786
+    - -0.11178171756764163
+    - -0.9601019224075971
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: Matrix
+    O:
+    - -0.9847094319829414
+    - -0.03072041050542157
+    - 0.03771187106829199
+    - -0.16727643504911285
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: Matrix
+    O:
+    - -0.96600392776312
+    - -0.00237000320730574
+    - -0.014560794141078106
+    - -0.2581061368991508
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: Matrix
+    O:
+    - 0.8286774598440462
+    - 0.4108990877287635
+    - -0.11294334446224308
+    - -0.36290413085520595
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: Matrix
+    O:
+    - 0.23881615126658906
+    - 0.20489163328211907
+    - 0.1730450967753246
+    - 0.9332961260967592
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: Matrix
+    O:
+    - -0.629401018244574
+    - -0.6953386474075527
+    - -0.3410445496487714
+    - 0.06361712669553317
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: Matrix
+    O:
+    - -0.9894882399014717
+    - 0.0011005888987121399
+    - 0.012249582183541555
+    - 0.1440894150765147
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: Matrix
+    O:
+    - -0.03385964957745164
+    - 0.17818847276812164
+    - -0.9692225301788805
+    - 0.16646344732915322
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: Matrix
+    O:
+    - 0.5195736767020798
+    - 0.6224505791475398
+    - 0.4091071410328877
+    - 0.41860460837534014
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: Matrix
+    O:
+    - -0.4593087762666979
+    - 0.666404746908436
+    - 0.027898282586611034
+    - 0.5866530892878768
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: Matrix
+    O:
+    - 0.23742890872773992
+    - 0.526885791267028
+    - 0.20600099732856725
+    - -0.7896723784968728
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: Matrix
+    O:
+    - -0.6233054245128734
+    - 0.3557963785526941
+    - 0.276080535547763
+    - -0.6392799251292621
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: Matrix
+    O:
+    - -0.5270215335303731
+    - 0.6267709967621429
+    - 0.28060579205980946
+    - -0.5006663662316159
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: Matrix
+    O:
+    - -0.06354625048346665
+    - 0.5200120490609472
+    - -0.3001804359407051
+    - 0.7971455630933258
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: Matrix
+    O:
+    - -0.7567465089423743
+    - -0.06906889419948808
+    - 0.09747663062667715
+    - 0.6426993974940844
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: Matrix
+    O:
+    - 0.22292423542519582
+    - 0.9565086216149661
+    - 0.10303875523293796
+    - -0.15741364920608483
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: Matrix
+    O:
+    - -0.01363895583965523
+    - 0.5939852703979287
+    - -0.8039203547687558
+    - -0.026599635756552456
+    v: 1.0
+  homogenization: SX
+- constituents:
+  - phase: Matrix
+    O:
+    - -0.48758845437710235
+    - 0.6257670861402754
+    - 0.39046226060686806
+    - 0.46713196861639805
+    v: 1.0
+  homogenization: SX

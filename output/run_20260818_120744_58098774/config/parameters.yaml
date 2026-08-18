@@ -1,0 +1,74 @@
+image_path: /Users/lorenzmaier/PycharmProjects/microDAM/examples/AlSi7Mg_1 Mitte 100x.tif
+um_per_pixel: 0.35
+crop_x: null
+crop_y: null
+crop_w: null
+crop_h: null
+dark_phase_name: SecondPhase
+light_phase_name: Matrix
+dark_phase_material:
+  lattice: cF
+  mechanical:
+    output:
+    - F
+    - P
+    elastic:
+      type: Hooke
+      C_11: 200000000000.0
+      C_12: 120000000000.0
+      C_44: 80000000000.0
+    plastic:
+      type: none
+light_phase_material:
+  lattice: cF
+  mechanical:
+    output:
+    - F
+    - P
+    elastic:
+      type: Hooke
+      C_11: 150000000000.0
+      C_12: 90000000000.0
+      C_44: 60000000000.0
+    plastic:
+      type: none
+denoise_method: median
+median_ksize: 3
+gaussian_sigma: 1.0
+clahe_clip_limit: 2.0
+clahe_tile_grid_size: 8
+do_background_correction: false
+bg_blur_sigma: 25.0
+threshold_method: otsu
+manual_threshold: null
+adaptive_block_size: 51
+adaptive_C: 2.0
+invert_binary_after_threshold: false
+remove_small_objects_min_size: 0
+remove_small_holes_area_threshold: 0
+morphology_target_phase: light
+do_opening: false
+do_closing: false
+morph_disk_radius: 1
+rve_w: 1024
+rve_h: 1024
+rve_x: null
+rve_y: null
+periodicity_tolerance: 0.1
+enable_dendrite_mode: false
+dendrite_min_distance: 5
+dendrite_phase_id: 0
+downsample_factor: 1
+nz_layers: 1
+voxel_size_um: null
+connectivity: 4
+min_grain_size: 5
+small_grain_mode: keep
+dark_phase_orientation_mode: random
+light_phase_orientation_mode: random
+random_seed: 420
+output_root: /Users/lorenzmaier/PycharmProjects/microDAM/output
+save_debug_plots: true
+figure_dpi: 150
+show_grain_labels: false
+material_filename: material.yaml

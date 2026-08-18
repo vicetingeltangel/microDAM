@@ -1,0 +1,2 @@
+[console_scripts]
+micro2damask = micro2damask.cli:main

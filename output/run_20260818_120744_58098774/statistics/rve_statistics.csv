@@ -1,0 +1,2 @@
+dark_phase_name,light_phase_name,total_grains,n_dark_grains,n_light_grains,dark_area_fraction,light_area_fraction,mean_grain_area_px,median_grain_area_px,min_grain_area_px,max_grain_area_px
+SecondPhase,Matrix,570,488,82,0.12329959869384766,0.8767004013061523,1839.6070175438597,95.0,1,916534

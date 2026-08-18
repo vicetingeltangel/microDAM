@@ -1,0 +1,17 @@
+Metadata-Version: 2.4
+Name: micro2damask
+Version: 0.1.0
+Summary: Image-based microstructure to DAMASK RVE generator
+Requires-Python: >=3.10
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: opencv-python
+Requires-Dist: matplotlib
+Requires-Dist: scipy
+Requires-Dist: scikit-image
+Requires-Dist: PyYAML
+Provides-Extra: damask
+Requires-Dist: damask; extra == "damask"
+Provides-Extra: vtk
+Requires-Dist: vtk; extra == "vtk"
+Requires-Dist: pyevtk; extra == "vtk"
