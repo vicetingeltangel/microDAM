@@ -123,7 +123,8 @@ def calculate_grain_statistics(
         cy, cx = p.centroid
         minr, minc, maxr, maxc = p.bbox
         perim = float(p.perimeter) if hasattr(p, "perimeter") else None
-        equiv_d = float(p.equivalent_diameter) if hasattr(p, "equivalent_diameter") else None
+        equiv_d = (float(p.equivalent_diameter_area) if hasattr(p, "equivalent_diameter_area")else None
+        )
 
         rows.append(
             {

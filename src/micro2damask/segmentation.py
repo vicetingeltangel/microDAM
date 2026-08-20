@@ -72,11 +72,11 @@ def clean_segmentation(phase_map_raw: np.ndarray, cfg: Config) -> np.ndarray:
     target = phase_map_raw == target_id
     target = morphology.remove_small_objects(
         target,
-        min_size=cfg.remove_small_objects_min_size,
+        max_size=cfg.remove_small_objects_min_size,
     )
     target = morphology.remove_small_holes(
         target,
-        area_threshold=cfg.remove_small_holes_area_threshold,
+        max_size=cfg.remove_small_holes_area_threshold,
     )
 
     if cfg.do_opening:
