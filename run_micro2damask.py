@@ -1,8 +1,30 @@
-"""Einfacher PyCharm-Starter für micro2damask.
+"""Simple development runner for micro2damask.
 
-Die Datei in den Projekt-Hauptordner legen, also neben ``src``.
-Danach nur die Werte im Abschnitt "BENUTZER-EINSTELLUNGEN" anpassen
-und in PyCharm auf Run drücken.
+This script provides a convenient way to run the complete micro2damask
+pipeline directly from an IDE.
+
+Usage
+-----
+1. Place this file in the repository root, next to the ``src`` directory.
+2. Adjust the values in the "USER SETTINGS" section below.
+3. Run the script from PyCharm or another Python IDE.
+
+The script can also be executed directly with:
+
+    python run_micro2damask.py
+
+No command-line arguments are required.
+
+Notes
+-----
+The phase configuration is read from a separate YAML file. The software uses
+the following generic image-phase convention:
+
+    phase_id = 0 -> dark phase
+    phase_id = 1 -> light phase
+
+The physical names and DAMASK material definitions of these phases are defined
+in ``phase_config_example.yaml`` or another user-specified YAML file.
 """
 
 from __future__ import annotations
@@ -15,13 +37,23 @@ import yaml
 
 
 # ============================================================================
-# Projektpfad / Import
+# PROJECT PATH AND PACKAGE IMPORT
 # ============================================================================
 
+# Repository root directory.
 PROJECT_DIR = Path(__file__).resolve().parent
+
+# Source directory used by the src-layout of the Python package.
 SRC_DIR = PROJECT_DIR / "src"
 
-# Dadurch funktioniert das Skript auch ohne vorheriges `pip install -e .`.
+# Add the local source directory to the Python search path.
+#
+# This allows the script to be executed directly from the repository without
+# requiring an editable installation such as:
+#
+#     python -m pip install -e .
+#
+# For regular package use, installing the project is still recommended.
 if str(SRC_DIR) not in sys.path:
     sys.path.insert(0, str(SRC_DIR))
 
@@ -29,178 +61,329 @@ from micro2damask import Config, run_pipeline  # noqa: E402
 
 
 # ============================================================================
-# BENUTZER-EINSTELLUNGEN
+# USER SETTINGS
+# ============================================================================
+#
+# Adjust the settings in this section before running the script.
+# No changes to the micro2damask source code should normally be required.
 # ============================================================================
 
-# Eingangsbild
-IMAGE_PATH = Path(
-    r"/Users/lorenzmaier/PycharmProjects/microDAM/examples/AlSi7Mg_1 Mitte 100x.tif"
-)
 
-# YAML-Datei mit Namen und DAMASK-Materialdefinitionen der dunklen/hellen Phase.
-# Liegt die Datei im Projektordner, reicht z. B.:
+# ---------------------------------------------------------------------------
+# Input image
+# ---------------------------------------------------------------------------
+
+# Path to the grayscale microstructure image.
+#
+# For a public repository, it is recommended to use an example image stored
+# inside an ``examples`` or ``test_data`` directory instead of a user-specific
+# absolute path.
+IMAGE_PATH = PROJECT_DIR / "examples" / "AlSi7Mg_1 Mitte Si eut  Aluminide 500x.tif"
+
+
+# ---------------------------------------------------------------------------
+# Phase configuration
+# ---------------------------------------------------------------------------
+
+# YAML file containing:
+#   - the names of the dark and light phases
+#   - their DAMASK material definitions
+#
+# Example convention:
+#
+# dark:
+#   name: Si_eutectic
+#   material:
+#     ...
+#
+# light:
+#   name: Al_matrix
+#   material:
+#     ...
 PHASE_CONFIG_PATH = PROJECT_DIR / "phase_config_example.yaml"
 
-# Maßstab des Originalbildes [µm/Pixel]
+
+# ---------------------------------------------------------------------------
+# Image scale
+# ---------------------------------------------------------------------------
+
+# Physical resolution of the original image in micrometres per pixel.
 UM_PER_PIXEL = 0.35
 
-# RVE-Größe im Originalbild [Pixel]
+
+# ---------------------------------------------------------------------------
+# Representative volume element (RVE)
+# ---------------------------------------------------------------------------
+
+# RVE dimensions in pixels of the original input image.
 RVE_WIDTH = 1024
 RVE_HEIGHT = 1024
 
-# Position des RVE im Originalbild.
-# None = automatische Auswahl.
-RVE_X = None
+# Optional position of the upper-left corner of the RVE.
+#
+# Set both values to None to let micro2damask select the RVE automatically.
+RVE_X = 500 # 500 pixel to the left
 RVE_Y = None
 
-# Downsampling: z. B. 4 bedeutet 4x4 Bildpixel -> 1 Voxel in x/y.
-DOWNSAMPLE_FACTOR = 1
 
-# Anzahl der Voxelschichten in z-Richtung
+# ---------------------------------------------------------------------------
+# Voxelization
+# ---------------------------------------------------------------------------
+
+# Downsampling factor in the x-y plane.
+#
+# Example:
+#   DOWNSAMPLE_FACTOR = 4
+#
+# means that 4 x 4 image pixels are represented by one voxel.
+DOWNSAMPLE_FACTOR = 4
+
+# Number of voxel layers used to extrude the 2D microstructure in z direction.
 NZ_LAYERS = 1
 
-# Phase, auf die die morphologische Bereinigung angewendet wird:
-# "dark" oder "light"
+
+# ---------------------------------------------------------------------------
+# Morphological processing
+# ---------------------------------------------------------------------------
+
+# Select which image phase is affected by the configured morphological cleanup.
+#
+# Allowed values:
+#   "dark"
+#   "light"
 MORPHOLOGY_TARGET_PHASE = "light"
 
-# Ergebnisordner
+
+# ---------------------------------------------------------------------------
+# Output
+# ---------------------------------------------------------------------------
+
+# Root directory in which timestamped simulation/output directories are created.
 OUTPUT_DIR = PROJECT_DIR / "output"
 
-# Diagnoseplots abspeichern
+# Save diagnostic plots generated during image processing.
 SAVE_DEBUG_PLOTS = True
 
 
 # ============================================================================
-# Hilfsfunktionen
+# HELPER FUNCTIONS
 # ============================================================================
 
 
 def load_phase_config(path: Path) -> Dict[str, Any]:
-    """Lädt Namen und DAMASK-Materialdefinitionen der beiden Bildphasen."""
+    """Load and validate the two-phase material configuration.
+
+    Parameters
+    ----------
+    path
+        Path to the YAML file containing the dark and light phase definitions.
+
+    Returns
+    -------
+    dict
+        Parsed phase configuration.
+
+    Raises
+    ------
+    ValueError
+        If the YAML file does not contain valid ``dark`` and ``light`` phase
+        definitions.
+    """
 
     with path.open("r", encoding="utf-8") as file:
         data = yaml.safe_load(file)
 
     if not isinstance(data, dict):
-        raise ValueError("Die Phasenkonfiguration muss ein YAML-Dictionary sein.")
+        raise ValueError(
+            "The phase configuration must contain a YAML mapping."
+        )
 
     for phase in ("dark", "light"):
         if phase not in data or not isinstance(data[phase], dict):
             raise ValueError(
-                f"In der Phasenkonfiguration fehlt der Abschnitt '{phase}'."
+                f"The phase configuration is missing the '{phase}' section."
             )
 
         if not data[phase].get("name"):
-            raise ValueError(f"Für '{phase}' fehlt der Phasenname 'name'.")
+            raise ValueError(
+                f"The '{phase}' phase does not define a phase name."
+            )
 
         if not isinstance(data[phase].get("material"), dict):
             raise ValueError(
-                f"Für '{phase}' fehlt die DAMASK-Materialdefinition 'material'."
+                f"The '{phase}' phase does not contain a valid DAMASK "
+                f"material definition."
             )
 
     return data
 
 
 def build_config(phase_cfg: Dict[str, Any]) -> Config:
-    """Erzeugt die micro2damask-Konfiguration aus den Einstellungen oben."""
+    """Create the micro2damask configuration for the current run.
+
+    The image-processing convention is fixed to:
+
+        phase_id 0 = dark image phase
+        phase_id 1 = light image phase
+
+    The physical phase names and material models are obtained from the
+    external YAML configuration.
+    """
 
     return Config(
+        # Input image and physical scale
         image_path=str(IMAGE_PATH),
         um_per_pixel=UM_PER_PIXEL,
 
-        # Phasenzuordnung:
-        # phase_id 0 = dunkel, phase_id 1 = hell
+        # Phase definitions
         dark_phase_name=str(phase_cfg["dark"]["name"]),
         light_phase_name=str(phase_cfg["light"]["name"]),
         dark_phase_material=phase_cfg["dark"]["material"],
         light_phase_material=phase_cfg["light"]["material"],
 
+        # Morphological processing
         morphology_target_phase=MORPHOLOGY_TARGET_PHASE,
 
+        # RVE definition
         rve_w=RVE_WIDTH,
         rve_h=RVE_HEIGHT,
         rve_x=RVE_X,
         rve_y=RVE_Y,
 
+        # 2D-to-3D voxelization
         downsample_factor=DOWNSAMPLE_FACTOR,
         nz_layers=NZ_LAYERS,
 
+        # Output settings
         output_root=str(OUTPUT_DIR),
         save_debug_plots=SAVE_DEBUG_PLOTS,
     )
 
 
 # ============================================================================
-# Programmstart
+# MAIN PROGRAM
 # ============================================================================
 
 
 def main() -> None:
+    """Run the complete micro2damask processing pipeline."""
+
     print("=" * 70)
     print("micro2damask")
     print("=" * 70)
 
+    # ------------------------------------------------------------------------
+    # Validate required files and directories
+    # ------------------------------------------------------------------------
+
     if not SRC_DIR.is_dir():
         raise FileNotFoundError(
-            f"Der src-Ordner wurde nicht gefunden:\n{SRC_DIR}\n\n"
-            "Lege run_micro2damask.py in den Projekt-Hauptordner neben 'src'."
+            f"Source directory not found:\n{SRC_DIR}\n\n"
+            "Place run_micro2damask.py in the repository root next to 'src'."
         )
 
     if not IMAGE_PATH.is_file():
         raise FileNotFoundError(
-            f"Das Eingangsbild wurde nicht gefunden:\n{IMAGE_PATH}\n\n"
-            "Passe IMAGE_PATH oben im Skript an."
+            f"Input image not found:\n{IMAGE_PATH}\n\n"
+            "Adjust IMAGE_PATH in the USER SETTINGS section."
         )
 
     if not PHASE_CONFIG_PATH.is_file():
         raise FileNotFoundError(
-            f"Die Phasenkonfiguration wurde nicht gefunden:\n"
-            f"{PHASE_CONFIG_PATH}\n\n"
-            "Passe PHASE_CONFIG_PATH oben im Skript an."
+            f"Phase configuration not found:\n{PHASE_CONFIG_PATH}\n\n"
+            "Adjust PHASE_CONFIG_PATH in the USER SETTINGS section."
         )
+
+    # ------------------------------------------------------------------------
+    # Load phase definitions and construct the main configuration
+    # ------------------------------------------------------------------------
 
     phase_cfg = load_phase_config(PHASE_CONFIG_PATH)
     cfg = build_config(phase_cfg)
 
-    print(f"Bild:              {IMAGE_PATH}")
-    print(f"Dunkle Phase (0):  {cfg.dark_phase_name}")
-    print(f"Helle Phase  (1):  {cfg.light_phase_name}")
-    print(f"RVE:               {cfg.rve_w} x {cfg.rve_h} Pixel")
-    print(f"Downsampling:      {cfg.downsample_factor}")
-    print(f"z-Schichten:       {cfg.nz_layers}")
-    print(f"Ausgabe:           {OUTPUT_DIR}")
+    # ------------------------------------------------------------------------
+    # Print run configuration
+    # ------------------------------------------------------------------------
 
-    print("\nPipeline wird ausgeführt ...\n")
+    effective_voxel_size_xy = (
+        cfg.um_per_pixel * cfg.downsample_factor
+    )
+
+    print(f"Input image:        {IMAGE_PATH}")
+    print(f"Dark phase (0):     {cfg.dark_phase_name}")
+    print(f"Light phase (1):    {cfg.light_phase_name}")
+    print(f"Image resolution:   {cfg.um_per_pixel} µm/pixel")
+    print(f"RVE size:           {cfg.rve_w} x {cfg.rve_h} pixels")
+    print(f"Downsampling:       {cfg.downsample_factor}")
+    print(
+        f"Voxel size in x/y:  "
+        f"{effective_voxel_size_xy:.6g} µm"
+    )
+    print(f"Number of z layers: {cfg.nz_layers}")
+    print(f"Output directory:   {OUTPUT_DIR}")
+
+    # ------------------------------------------------------------------------
+    # Execute the processing pipeline
+    # ------------------------------------------------------------------------
+
+    print("\nRunning micro2damask pipeline ...\n")
+
     result = run_pipeline(cfg)
+
+    # ------------------------------------------------------------------------
+    # Validation report
+    # ------------------------------------------------------------------------
 
     validation = result["validation"]
 
     print("\n" + "=" * 70)
-    print("VALIDIERUNG")
+    print("VALIDATION")
     print("=" * 70)
-    print(f"Modell gültig: {validation['ok']}")
+
+    print(f"Model valid: {validation['ok']}")
 
     if validation["warnings"]:
-        print("\nWarnungen:")
+        print("\nWarnings:")
         for warning in validation["warnings"]:
             print(f"  - {warning}")
 
     if validation["errors"]:
-        print("\nFehler:")
+        print("\nErrors:")
         for error in validation["errors"]:
             print(f"  - {error}")
 
+    # ------------------------------------------------------------------------
+    # Generated files
+    # ------------------------------------------------------------------------
+
     print("\n" + "=" * 70)
-    print("ERGEBNISSE")
+    print("RESULTS")
     print("=" * 70)
-    print(f"Ergebnisordner: {result['output_dir']}")
-    print(f"Materialdatei:  {result['material']['material_file']}")
-    print(f"Geometriedatei: {result['damask'].get('vti_path')}")
+
+    print(f"Output directory: {result['output_dir']}")
+    print(
+        f"Material file:   "
+        f"{result['material']['material_file']}"
+    )
+    print(
+        f"Geometry file:   "
+        f"{result['damask'].get('vti_path')}"
+    )
+
+    # ------------------------------------------------------------------------
+    # Final status
+    # ------------------------------------------------------------------------
 
     if validation["ok"]:
-        print("\n✓ Pipeline erfolgreich abgeschlossen und validiert.")
+        print(
+            "\nPipeline completed successfully and the generated "
+            "model passed validation."
+        )
     else:
-        print("\n✗ Pipeline abgeschlossen, aber die Validierung enthält Fehler.")
+        print(
+            "\nPipeline completed, but the generated model contains "
+            "validation errors."
+        )
 
 
 if __name__ == "__main__":
