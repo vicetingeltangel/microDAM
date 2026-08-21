@@ -78,7 +78,7 @@ from micro2damask import Config, run_pipeline  # noqa: E402
 # For a public repository, it is recommended to use an example image stored
 # inside an ``examples`` or ``test_data`` directory instead of a user-specific
 # absolute path.
-IMAGE_PATH = PROJECT_DIR / "examples" / "AlSi7Mg_1 Mitte Si eut  Aluminide 500x.tif"
+IMAGE_PATH = PROJECT_DIR / "examples" / "DP.jpg"
 
 
 # ---------------------------------------------------------------------------
@@ -116,13 +116,13 @@ UM_PER_PIXEL = 0.35
 # ---------------------------------------------------------------------------
 
 # RVE dimensions in pixels of the original input image.
-RVE_WIDTH = 1024
-RVE_HEIGHT = 1024
+RVE_WIDTH = 200
+RVE_HEIGHT = 200
 
 # Optional position of the upper-left corner of the RVE.
 #
 # Set both values to None to let micro2damask select the RVE automatically.
-RVE_X = 500 # 500 pixel to the left
+RVE_X = None
 RVE_Y = None
 
 
@@ -136,7 +136,7 @@ RVE_Y = None
 #   DOWNSAMPLE_FACTOR = 4
 #
 # means that 4 x 4 image pixels are represented by one voxel.
-DOWNSAMPLE_FACTOR = 4
+DOWNSAMPLE_FACTOR = 1
 
 # Number of voxel layers used to extrude the 2D microstructure in z direction.
 NZ_LAYERS = 1

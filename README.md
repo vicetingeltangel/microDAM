@@ -145,7 +145,7 @@ micro2damask/
 Optional:
 
 - `damask` for geometry export through the official `damask.GeomGrid` API
-- `vtk` and/or `pyevtk` for VTI export fallbacks and debug VTI files
+- `vtk` for DAMASK-compatible inline-binary VTI fallbacks and debug VTI files
 
 ## Installation
 
@@ -504,9 +504,9 @@ This normally means DAMASK cannot access the geometry path itself. Check that:
 
 This error occurs before DAMASK can validate the internal VTI contents.
 
-### `pyevtk nicht verfügbar ... versuche vtk`
+### VTI fallback requires `vtk`
 
-This is a fallback warning. Install the optional VTK dependencies if required:
+The DAMASK fallback intentionally uses VTK's inline-binary writer. `pyevtk` is not used for solver input because it writes VTK XML `AppendedData`, which is not supported by the DAMASK grid solver. Install the optional VTK dependency if required:
 
 ```bash
 python -m pip install -e ".[vtk]"

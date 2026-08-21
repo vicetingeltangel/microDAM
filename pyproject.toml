@@ -11,7 +11,7 @@ dependencies = ["numpy","pandas","opencv-python","matplotlib","scipy","scikit-im
 
 [project.optional-dependencies]
 damask = ["damask"]
-vtk = ["vtk","pyevtk"]
+vtk = ["vtk"]
 
 [project.scripts]
 micro2damask = "micro2damask.cli:main"
