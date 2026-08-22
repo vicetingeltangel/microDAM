@@ -82,16 +82,32 @@ def handle_small_grains(grain_map: np.ndarray, phase_map: np.ndarray, cfg: Confi
         neighbor_labels_same_phase = [int(l) for l in neighbor_labels
                                        if l >= 0 and np.any(phase_map[out == l] == phase_small)]
         if not neighbor_labels_same_phase:
-            ys, xs = np.nonzero(mask_small)
-            coords_small = np.column_stack((ys, xs))
-            coords_other = np.column_stack(np.nonzero(out >= 0))
-            labels_other = out[out >= 0]
+            # Fallback: find the nearest *other* grain of the same phase.
+            #
+            # The previous implementation built the KD-tree from ``out >= 0``.
+            # That candidate set also contained the small grain itself, so every
+            # small-grain pixel could select itself at distance zero and no merge
+            # happened. Restricting the candidates also prevents an accidental
+            # merge across phase boundaries.
+            coords_small = np.column_stack(np.nonzero(mask_small))
+            candidate_mask = (out >= 0) & (out != small) & (phase_map == phase_small)
+            coords_other = np.column_stack(np.nonzero(candidate_mask))
+            labels_other = out[candidate_mask]
+
+            # If this is the only grain of its phase, there is no physically
+            # consistent merge target. Keep it unchanged instead of changing its
+            # phase implicitly by merging it into another phase.
             if coords_other.size == 0:
                 continue
+
             tree = cKDTree(coords_other)
-            for r, c in coords_small:
-                _, idx = tree.query([r, c], k=1)
-                out[r, c] = int(labels_other[idx])
+            distances, indices = tree.query(coords_small, k=1)
+            nearest_small_idx = int(np.argmin(distances))
+            best = int(labels_other[int(indices[nearest_small_idx])])
+
+            out[mask_small] = best
+            area_dict[best] = area_dict.get(best, 0) + int(mask_small.sum())
+            area_dict.pop(int(small), None)
             continue
         best = max(neighbor_labels_same_phase, key=lambda x: area_dict.get(int(x), 0))
         out[mask_small] = best

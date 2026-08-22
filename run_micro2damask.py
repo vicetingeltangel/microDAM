@@ -136,7 +136,7 @@ RVE_Y = None
 #   DOWNSAMPLE_FACTOR = 4
 #
 # means that 4 x 4 image pixels are represented by one voxel.
-DOWNSAMPLE_FACTOR = 1
+DOWNSAMPLE_FACTOR = 2
 
 # Number of voxel layers used to extrude the 2D microstructure in z direction.
 NZ_LAYERS = 1

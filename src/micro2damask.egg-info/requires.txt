@@ -11,4 +11,3 @@ damask
 
 [vtk]
 vtk
-pyevtk

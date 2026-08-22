@@ -1,7 +1,7 @@
 import numpy as np
 
 from micro2damask.config import Config
-from micro2damask.grains import identify_grains
+from micro2damask.grains import handle_small_grains, identify_grains
 
 
 def test_connected_components_create_distinct_grains():
@@ -102,3 +102,38 @@ def test_diagonal_connectivity_changes_result():
     )
 
     assert n_grains_4 > n_grains_8
+
+def test_small_grain_fallback_merges_into_nearest_other_same_phase_grain():
+    """Regression test: the KD-tree fallback must not select the small grain itself."""
+    grain_map = np.zeros((11, 11), dtype=np.int32)
+    phase_map = np.ones((11, 11), dtype=np.uint8)
+
+    # A sufficiently large phase-0 grain far enough away that the radius-3
+    # dilation around the tiny grain does not see it.
+    grain_map[:, :4] = 1
+    phase_map[:, :4] = 0
+
+    # Tiny isolated phase-0 grain. Under the old implementation its pixels
+    # were part of the KD-tree candidate set and therefore selected themselves.
+    grain_map[5, 8] = 2
+    phase_map[5, 8] = 0
+
+    cfg = Config(min_grain_size=2, small_grain_mode="merge")
+    merged = handle_small_grains(grain_map, phase_map, cfg)
+
+    assert merged[5, 8] == 1
+    assert 2 not in np.unique(merged)
+
+
+def test_small_grain_merge_never_changes_phase_when_no_same_phase_target_exists():
+    """A lone grain of a phase is kept instead of being merged across phases."""
+    grain_map = np.zeros((7, 7), dtype=np.int32)
+    phase_map = np.ones((7, 7), dtype=np.uint8)
+
+    grain_map[3, 3] = 1
+    phase_map[3, 3] = 0
+
+    cfg = Config(min_grain_size=2, small_grain_mode="merge")
+    merged = handle_small_grains(grain_map, phase_map, cfg)
+
+    assert merged[3, 3] == 1

@@ -14,4 +14,3 @@ Provides-Extra: damask
 Requires-Dist: damask; extra == "damask"
 Provides-Extra: vtk
 Requires-Dist: vtk; extra == "vtk"
-Requires-Dist: pyevtk; extra == "vtk"
