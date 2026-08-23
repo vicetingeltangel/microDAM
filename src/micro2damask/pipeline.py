@@ -14,7 +14,7 @@ from .orientations import generate_orientations_per_grain
 from .geometry import create_damask_geometry_from_grains
 from .material import create_damask_material_file
 from .validation import validate_damask_model
-from .visualization import plot_results
+from .visualization import plot_results, save_ipf_orientation_maps
 from .output import save_results, print_summary
 
 def run_pipeline(cfg: Config) -> Dict[str, Any]:
@@ -34,6 +34,11 @@ def run_pipeline(cfg: Config) -> Dict[str, Any]:
     grain_stats_df = calculate_grain_statistics(grain_map, grain_to_phase, cfg)
     rve_stats_df = calculate_rve_statistics_from_grains(grain_stats_df, rve_phase_map, cfg)
     grain_orientations = generate_orientations_per_grain(n_grains, grain_to_phase, cfg)
+    ipf_maps = (
+        save_ipf_orientation_maps(grain_map, grain_orientations, cfg, out_dir)
+        if cfg.save_ipf_maps
+        else {}
+    )
     damask_info = create_damask_geometry_from_grains(grain_map, rve_phase_map, cfg, out_dir)
     material_info = create_damask_material_file(grain_orientations, grain_to_phase, cfg, out_dir / "material")
     voxel3d = build_voxel_grid_3d_from_grain_map(grain_map, cfg.nz_layers)
@@ -61,4 +66,4 @@ def run_pipeline(cfg: Config) -> Dict[str, Any]:
         rve_stats_df=rve_stats_df,
     )
     print_summary(stats, periodic_info, damask_info, cfg, out_dir)
-    return {"output_dir": out_dir, "statistics": stats, "periodicity": periodic_info, "grain_map": grain_map, "grain_to_phase": grain_to_phase, "grain_orientations": grain_orientations, "damask": damask_info, "material": material_info, "validation": validation}
+    return {"output_dir": out_dir, "statistics": stats, "periodicity": periodic_info, "grain_map": grain_map, "grain_to_phase": grain_to_phase, "grain_orientations": grain_orientations, "damask": damask_info, "material": material_info, "validation": validation, "ipf_maps": ipf_maps}

@@ -95,6 +95,12 @@ class Config:
     # ---------------------------
     dark_phase_orientation_mode: str = "random"
     light_phase_orientation_mode: str = "random"
+
+    # Optional MTEX ODF ASCII exports. Set the corresponding orientation
+    # mode to "mtex_odf" to sample one orientation per grain from the ODF.
+    dark_phase_odf_path: Optional[str] = None
+    light_phase_odf_path: Optional[str] = None
+
     random_seed: Optional[int] = 420
 
     # ---------------------------
@@ -102,6 +108,7 @@ class Config:
     # ---------------------------
     output_root: str = "output"
     save_debug_plots: bool = True
+    save_ipf_maps: bool = True
     figure_dpi: int = 150
     show_grain_labels: bool = False
     material_filename: str = "material.yaml"
@@ -118,6 +125,13 @@ class Config:
             return self.dark_phase_orientation_mode
         if phase_id == 1:
             return self.light_phase_orientation_mode
+        raise ValueError(f"Unbekannte phase_id: {phase_id}. Erwartet sind 0 oder 1.")
+
+    def phase_odf_path(self, phase_id: int) -> Optional[str]:
+        if phase_id == 0:
+            return self.dark_phase_odf_path
+        if phase_id == 1:
+            return self.light_phase_odf_path
         raise ValueError(f"Unbekannte phase_id: {phase_id}. Erwartet sind 0 oder 1.")
 
     def phase_material(self, phase_id: int) -> Dict[str, Any]:

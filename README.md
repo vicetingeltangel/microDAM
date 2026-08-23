@@ -550,3 +550,38 @@ If this repository is associated with a publication, please add the publication 
 ## License
 
 Add the project license here before publishing the repository publicly.
+
+## MTEX ODF orientations
+
+A phase can sample one Bunge-Euler orientation per grain from a generic MTEX
+ASCII ODF export (`phi1 Phi phi2 value`). The ODF values are interpreted as
+probability densities (m.r.d.); sampling includes the Euler-space `sin(Phi)`
+Jacobian.
+
+```python
+cfg.dark_phase_orientation_mode = "mtex_odf"
+cfg.dark_phase_odf_path = "odf_ferrite.txt"
+```
+
+The other phase can independently use another ODF or another orientation mode.
+The random seed controls reproducible ODF sampling.
+
+### IPF orientation maps
+
+By default, the pipeline also writes inverse-pole-figure (IPF) false-color maps
+from the realized grain orientations. The current implementation is restricted
+to cubic phases (`cP`, `cI`, `cF`), matching MTEX ODFs with `m-3m` symmetry.
+
+Generated files:
+
+```text
+images/ipf_RD_x.png
+images/ipf_TD_y.png
+images/ipf_ND_z.png
+images/ipf_orientation_maps.png
+```
+
+The sample-frame directions are interpreted as RD/X = `[1,0,0]`, TD/Y =
+`[0,1,0]`, and ND/Z = `[0,0,1]`. The cubic IPF key follows the DAMASK
+standard stereographic triangle: `[001]` red, `[101]` green, `[111]` blue.
+Set `save_ipf_maps = False` to disable these files.
