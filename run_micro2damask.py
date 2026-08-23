@@ -63,45 +63,17 @@ from micro2damask import Config, run_pipeline  # noqa: E402
 # ============================================================================
 # USER SETTINGS
 # ============================================================================
-#
-# Adjust the settings in this section before running the script.
-# No changes to the micro2damask source code should normally be required.
-# ============================================================================
-
-
 # ---------------------------------------------------------------------------
 # Input image
 # ---------------------------------------------------------------------------
 
-# Path to the grayscale microstructure image.
-#
-# For a public repository, it is recommended to use an example image stored
-# inside an ``examples`` or ``test_data`` directory instead of a user-specific
-# absolute path.
-IMAGE_PATH = PROJECT_DIR / "examples" / "DP.jpg"
-
+IMAGE_PATH = PROJECT_DIR / "examples" / "AlSi7Mg_1 Mitte 100x.tif"
 
 # ---------------------------------------------------------------------------
 # Phase configuration
 # ---------------------------------------------------------------------------
 
-# YAML file containing:
-#   - the names of the dark and light phases
-#   - their DAMASK material definitions
-#
-# Example convention:
-#
-# dark:
-#   name: Si_eutectic
-#   material:
-#     ...
-#
-# light:
-#   name: Al_matrix
-#   material:
-#     ...
 PHASE_CONFIG_PATH = PROJECT_DIR / "phase_config_example.yaml"
-
 
 # ---------------------------------------------------------------------------
 # Image scale
@@ -110,14 +82,13 @@ PHASE_CONFIG_PATH = PROJECT_DIR / "phase_config_example.yaml"
 # Physical resolution of the original image in micrometres per pixel.
 UM_PER_PIXEL = 0.35
 
-
 # ---------------------------------------------------------------------------
 # Representative volume element (RVE)
 # ---------------------------------------------------------------------------
 
 # RVE dimensions in pixels of the original input image.
-RVE_WIDTH = 200
-RVE_HEIGHT = 200
+RVE_WIDTH = 512
+RVE_HEIGHT = 512
 
 # Optional position of the upper-left corner of the RVE.
 #
@@ -125,21 +96,42 @@ RVE_HEIGHT = 200
 RVE_X = None
 RVE_Y = None
 
-
 # ---------------------------------------------------------------------------
 # Voxelization
 # ---------------------------------------------------------------------------
 
 # Downsampling factor in the x-y plane.
-#
 # Example:
-#   DOWNSAMPLE_FACTOR = 4
-#
-# means that 4 x 4 image pixels are represented by one voxel.
-DOWNSAMPLE_FACTOR = 2
+#   DOWNSAMPLE_FACTOR = 4 means that 4 x 4 image pixels are represented by one voxel.
+DOWNSAMPLE_FACTOR = 4
 
 # Number of voxel layers used to extrude the 2D microstructure in z direction.
 NZ_LAYERS = 1
+
+# ---------------------------------------------------------------------------
+# Crystal orientations
+# ---------------------------------------------------------------------------
+
+# Allowed values:
+#   "random"
+#   "mtex_odf"
+#
+# Each phase can use its own orientation source.
+
+DARK_PHASE_ORIENTATION_MODE = "mtex_odf"
+LIGHT_PHASE_ORIENTATION_MODE = "random"
+
+# MTEX ODF files.
+# Only required if the corresponding orientation mode is "mtex_odf".
+
+DARK_PHASE_ODF_PATH = PROJECT_DIR / "examples" / "ODF" / "odf_ferrite.txt"
+LIGHT_PHASE_ODF_PATH = None
+
+# Reproducible orientation sampling
+RANDOM_SEED = 420
+
+# Save RD / TD / ND IPF maps
+SAVE_IPF_MAPS = True
 
 
 # ---------------------------------------------------------------------------
@@ -147,12 +139,10 @@ NZ_LAYERS = 1
 # ---------------------------------------------------------------------------
 
 # Select which image phase is affected by the configured morphological cleanup.
-#
 # Allowed values:
 #   "dark"
 #   "light"
 MORPHOLOGY_TARGET_PHASE = "light"
-
 
 # ---------------------------------------------------------------------------
 # Output
@@ -163,7 +153,6 @@ OUTPUT_DIR = PROJECT_DIR / "output"
 
 # Save diagnostic plots generated during image processing.
 SAVE_DEBUG_PLOTS = True
-
 
 # ============================================================================
 # HELPER FUNCTIONS
@@ -219,17 +208,6 @@ def load_phase_config(path: Path) -> Dict[str, Any]:
 
 
 def build_config(phase_cfg: Dict[str, Any]) -> Config:
-    """Create the micro2damask configuration for the current run.
-
-    The image-processing convention is fixed to:
-
-        phase_id 0 = dark image phase
-        phase_id 1 = light image phase
-
-    The physical phase names and material models are obtained from the
-    external YAML configuration.
-    """
-
     return Config(
         # Input image and physical scale
         image_path=str(IMAGE_PATH),
@@ -253,6 +231,24 @@ def build_config(phase_cfg: Dict[str, Any]) -> Config:
         # 2D-to-3D voxelization
         downsample_factor=DOWNSAMPLE_FACTOR,
         nz_layers=NZ_LAYERS,
+
+        # Crystal orientations
+        dark_phase_orientation_mode=DARK_PHASE_ORIENTATION_MODE,
+        light_phase_orientation_mode=LIGHT_PHASE_ORIENTATION_MODE,
+
+        dark_phase_odf_path=(
+            str(DARK_PHASE_ODF_PATH)
+            if DARK_PHASE_ODF_PATH is not None
+            else None
+        ),
+        light_phase_odf_path=(
+            str(LIGHT_PHASE_ODF_PATH)
+            if LIGHT_PHASE_ODF_PATH is not None
+            else None
+        ),
+
+        random_seed=RANDOM_SEED,
+        save_ipf_maps=SAVE_IPF_MAPS,
 
         # Output settings
         output_root=str(OUTPUT_DIR),

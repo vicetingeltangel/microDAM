@@ -48,7 +48,7 @@ def plot_results(
 
     axs[3].imshow(raw_binary, cmap="gray")
     axs[3].set_title(
-        f"RAW\n0={cfg.dark_phase_name} (dunkel), 1={cfg.light_phase_name} (hell)"
+        f"RAW\n0={cfg.dark_phase_name} (dark), 1={cfg.light_phase_name} (bright)"
     )
 
     axs[4].imshow(cleaned_phase_map, cmap="gray", vmin=0, vmax=1)
