@@ -432,6 +432,42 @@ Multiple grains can therefore belong to the same phase while having different `m
 
 The mapping is stored through the grain-to-phase information and represented in the generated `material.yaml` and `grain_orientations.csv`.
 
+## MTEX ODF orientations
+
+A phase can sample one Bunge-Euler orientation per grain from a generic MTEX
+ASCII ODF export (`phi1 Phi phi2 value`). The ODF values are interpreted as
+probability densities (m.r.d.); sampling includes the Euler-space `sin(Phi)`
+Jacobian.
+
+```python
+cfg.dark_phase_orientation_mode = "mtex_odf"
+cfg.dark_phase_odf_path = "odf_ferrite.txt"
+```
+
+The other phase can independently use another ODF or another orientation mode.
+The random seed controls reproducible ODF sampling.
+
+### IPF orientation maps
+
+By default, the pipeline also writes inverse-pole-figure (IPF) false-color maps
+from the realized grain orientations. The current implementation is restricted
+to cubic phases (`cP`, `cI`, `cF`), matching MTEX ODFs with `m-3m` symmetry.
+
+Generated files:
+
+```text
+images/ipf_RD_x.png
+images/ipf_TD_y.png
+images/ipf_ND_z.png
+images/ipf_orientation_maps.png
+```
+
+The sample-frame directions are interpreted as RD/X = `[1,0,0]`, TD/Y =
+`[0,1,0]`, and ND/Z = `[0,0,1]`. The cubic IPF key follows the DAMASK
+standard stereographic triangle: `[001]` red, `[101]` green, `[111]` blue.
+Set `save_ipf_maps = False` to disable these files.
+
+
 ## Validation
 
 Before finishing a run, `validate_damask_model()` checks the consistency of the reconstructed model, including:
@@ -525,7 +561,6 @@ Depending on the installed scikit-image version, warnings may be emitted for mor
 - The segmentation model currently supports exactly **two image phases**.
 - Phase identification is intensity-based: dark and light image regions must be separable by the selected thresholding approach.
 - The generated 3D RVE is currently based on extrusion of a 2D grain map; it is not a reconstructed true 3D microstructure.
-- Random grain orientations are synthetic unless experimental orientation data are integrated separately.
 - The periodicity check is diagnostic; it does not automatically make the RVE periodic.
 - DAMASK material parameters are supplied by the user and must be validated independently.
 - Segmentation and grain reconstruction parameters strongly affect the generated model and should be verified visually and quantitatively.
@@ -545,43 +580,8 @@ Depending on the installed scikit-image version, warnings may be emitted for mor
 
 ## Citation
 
-If this repository is associated with a publication, please add the publication citation and DOI here before release.
+Not published yet - ownership: Lorenz Maier, Technical University of Munich
 
 ## License
 
-Add the project license here before publishing the repository publicly.
-
-## MTEX ODF orientations
-
-A phase can sample one Bunge-Euler orientation per grain from a generic MTEX
-ASCII ODF export (`phi1 Phi phi2 value`). The ODF values are interpreted as
-probability densities (m.r.d.); sampling includes the Euler-space `sin(Phi)`
-Jacobian.
-
-```python
-cfg.dark_phase_orientation_mode = "mtex_odf"
-cfg.dark_phase_odf_path = "odf_ferrite.txt"
-```
-
-The other phase can independently use another ODF or another orientation mode.
-The random seed controls reproducible ODF sampling.
-
-### IPF orientation maps
-
-By default, the pipeline also writes inverse-pole-figure (IPF) false-color maps
-from the realized grain orientations. The current implementation is restricted
-to cubic phases (`cP`, `cI`, `cF`), matching MTEX ODFs with `m-3m` symmetry.
-
-Generated files:
-
-```text
-images/ipf_RD_x.png
-images/ipf_TD_y.png
-images/ipf_ND_z.png
-images/ipf_orientation_maps.png
-```
-
-The sample-frame directions are interpreted as RD/X = `[1,0,0]`, TD/Y =
-`[0,1,0]`, and ND/Z = `[0,0,1]`. The cubic IPF key follows the DAMASK
-standard stereographic triangle: `[001]` red, `[101]` green, `[111]` blue.
-Set `save_ipf_maps = False` to disable these files.
+MIT License
